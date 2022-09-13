@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>투표하기</title>
+<title>투표 페이지</title>
 
 <!-- favicon: 인터넷 웹 브라우저의 주소창에 표시되는 웹 사이트를 대표하는 이미지 -->
 <link rel="icon" href="./favicon.png">
@@ -37,8 +37,7 @@
 	<!--cellpadding: 셀 안 여백, 셀을 구성하는 선과 셀 내부 문자와의 간격 
 		cellspacing: 셀과 셀 사이의 간격-->
 	
-		<table width="500" border="1" align="center" cellpadding="5"
-			cellspacing="0"; style="border-color: aliceblue;">
+		<table width="500" border="1" align="center" cellpadding="5" cellspacing="0"; style="border-color: aliceblue;">
 			<!-- 줄 만들기 -->
 			<tr style="font-size: 26px; font-style: bold;">
 				<!-- 줄 -->
@@ -62,11 +61,13 @@
 			<tr>
 				<td align="center">
 				<input type="submit" value="투표" style="font-family: 나눔고딕; background-color: white; color: salmon; border-color: lightsalmon;">
-				<input type="submit" value="결과" style="font-family: 나눔고딕; background-color: white; color: lightskyblue; border-color: skyblue">
+				<input type="button" value="결과" onclick="location.href='pollResult.jsp'" style="font-family: 나눔고딕; background-color: white; color: lightskyblue; border-color: skyblue;">
 				</td>
 			</tr>
 
 		</table>
 	</form>
+	
+	
 </body>
 </html>
