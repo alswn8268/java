@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>header와 footer</title>
+</head>
+<body>
+
+<!-- 
+	<header> 태그는 소개 및 탐색에 도움을 주는 콘텐츠를 나타내고, 제목, 로고, 검색 폼, 작성자 이름 등의 요소를 포함할 수 있다.
+	<header> 내부에 다른 <header> 또는 <footer>를 넣을 수 없다.
+	<address> 내부에도 <header>를 넣을 수 있다.
+ -->
+
+	<header>
+		<div class="container">
+			<!-- class 속성은 띄어쓰기로 여러 클래스를 동시에 사용할 수 있다. -->
+			<!-- 아래 클래스 속성 지정은 <div class="container-left" class="clearfix">와 같다. -->
+			<div class="container-left clearfix">
+				<div class="logo">
+					<img alt="html5" src="KakaoTalk_20220913_144501030.jpg" width="300px">
+				</div>
+				<ul class="menu clearfix">
+					<li class="menu-item">HTML</li>			
+					<li class="menu-item">CSS</li>			
+					<li class="menu-item">JavaScript</li>			
+					<li class="menu-item">jQuery</li>			
+				</ul>
+			</div>
+		</div>
+	</header>
+<!-- 
+	<footer> 태그는 일반적으로 작성자, 저작권 정보, 관련 문서 등의 내용을 담는다.
+	<footer> 내부에 다른 <header> 또는 <footer>를 넣을 수 없다.
+ -->	
+
+	<footer class="container">
+	&copy;두부
+
+	</footer>
+
+</body>
+</html>

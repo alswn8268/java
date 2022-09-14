@@ -1,0 +1,17 @@
+div {
+background-color: salmon;
+width: 200px;
+height: 50px;
+margin: 20px;	/* 바깥여백 */
+padding: 20px;	/* 안여백 */
+border: 5px solid skyblue;
+}
+
+span {
+background-color: yellow;
+width: 200px;
+height: 50px;
+margin: 20px;	/* 바깥여백 */
+padding: 20px;	/* 안여백 */
+border: 5px solid skyblue;
+}

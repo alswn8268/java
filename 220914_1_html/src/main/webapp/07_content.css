@@ -1,0 +1,43 @@
+@charset "UTF-8";
+
+body {	
+	font-family: 평창체;
+}
+header {
+	background-color: salmon;
+	margin: 10px;
+	padding: 10px;
+	color: white;
+}
+
+ul {
+	display: flex;
+}
+
+li {
+	margin: 10px;
+	list-style: none;
+}
+
+main {
+	display: flex;
+}
+section {
+	width: 70%;
+	background-color: salmon;
+	margin: 10px;
+	padding: 10px;
+	color: white;
+}
+article {
+	background-color: skyblue;
+	margin: 10px;
+	padding: 10px;
+}
+aside {
+	width: 30%;
+	background-color: skyblue;
+	margin: 10px;
+	padding: 10px;	
+	color: white;
+}
