@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>콘텐츠 구분</title>
+<link rel="stylesheet" href="07_content.css">
+</head>
+<body>
+
+<!-- 
+	<header>	=> 문서의 헤더(로고, 제목, 검색창 등을 포함)
+	<footer>	=> 문서의 푸터(작성자, 저작권, 관련 문서 등을 포함)
+	<main>		=> 문서의 주요 콘텐츠를 설정, 한 문서에 하나의 <main>만 포함시킨다. IE 지원 불가
+	<article>	=> 독립적으로 구분되거나 재사용 가능한 영역을 설정한다.(신문 기사, 블로그 등)
+	<section> 	=> 문서의 일반적인 영역을 설정한다.
+	<aside>		=> 문서의 별도 콘텐츠를 설정한다.(광고나 링크 등의 사이드 바)
+	<nav>		=> 다른 페이지로 링크를 제공하는 영역을 설정한다.(내비게이션 바, 메뉴, 목차, 색인 등을 포함)
+
+	<main> 요소는 문서 <body>의 주요 콘텐츠를 나타낸다.
+   주요 콘텐츠 영역은 문서의 핵심 주제나 앱의 핵심 기능에 직접적으로 연결됐거나 확장하는 콘텐츠로 이루어진다.
+   문서에 하나보다 많은 <main> 요소가 존재해선 안된다.
+
+   <article> 요소는 문서, 페이지, 애플리케이션, 또는 사이트 안에서 독립적으로 구분해 배포하거나 재사용할 수 있는
+   구획을 나타낸다. 사용 예제로 게시판과 블로그 글, 매거진이나 뉴스 기사 등이 있다.
+
+   <section> 요소는 HTML 문서의 독립적인 구획을 나타내며, 더 적합한 의미를 가진 요소가 없을 때 사용한다.
+   보통 <section>은 제목을 포함하지만, 항상 그런 것은 아니다.
+
+   <aside> 요소는 문서의 주요 내용과 간접적으로만 연관된 부분을 나타낸다. 주로 사이드바 혹은 콜아웃 박스로 표현한다.
+   
+   <nav> 요소는 문서의 부분 중 현재 페이지 내, 또는 다른 페이지로의 링크를 보여주는 구획을 나타낸다.
+   자주 쓰이는 예제는 메뉴, 목차, 색인이다.
+
+	<address> 태그는 연락처 정보를 나타낸다.
+
+-->
+
+	<header>
+		<h1>Lorem Ipsum</h1>
+		<nav>
+			<ul>
+				<li>메뉴1</li>
+				<li>메뉴2</li>
+				<li>메뉴3</li>
+			</ul>
+		</nav>		
+	</header>
+
+	<main>
+		<section>
+			<h1>Section</h1>
+			<article>
+				<h2>What is Lorem Ipsum?</h2>
+				<p>
+				Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+				</p>
+			</article>
+			<article>
+				<h2>Where does it come from?</h2>
+				<p>
+				Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+				</p>
+			</article>
+			<article>
+				<h2>Why do we use it?</h2>
+				<p>
+				It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+				</p>
+			</article>
+		</section>
+		<aside>
+			<h1>Aside</h1>
+		</aside>
+	</main>
+			
+		<footer>
+			<h1>Footer</h1>
+			<address>
+				<a href="mailto:a@a.com">a@a.com</a>
+				<a href="mailto:a@a.com">a@a.com</a>
+			</address>
+		</footer>
+
+</body>
+</html>

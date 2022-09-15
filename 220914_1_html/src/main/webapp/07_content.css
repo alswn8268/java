@@ -1,10 +1,10 @@
 @charset "UTF-8";
 
 body {	
-	font-family: 평창체;
+	font-family: 평창 평화체 light;
 }
 header {
-	background-color: salmon;
+	background-color: lightsalmon;
 	margin: 10px;
 	padding: 10px;
 	color: white;
@@ -24,20 +24,29 @@ main {
 }
 section {
 	width: 70%;
-	background-color: salmon;
+	background-color: lightsalmon;
 	margin: 10px;
 	padding: 10px;
 	color: white;
 }
 article {
-	background-color: skyblue;
+	background-color: lightskyblue;
 	margin: 10px;
 	padding: 10px;
 }
 aside {
 	width: 30%;
-	background-color: skyblue;
+	background-color: lightskyblue;
 	margin: 10px;
 	padding: 10px;	
 	color: white;
+}
+footer {
+	background-color: lightsalmon;
+	margin: 10px;
+	padding: 10px;
+	color: white;	
+}
+a {
+	display: block;
 }

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>iframe</title>
+</head>
+<body>
+	
+<!-- <iframe> 태그는 현재 html 문서 안에 다른 html 문서를 삽입한다. 중첩 브라우징
+	src 속성에 프레임에 포함할 문서나 동영상의 url을 적는다.-->	
+	
+	<p>여기는 현재 페이지</p>
+	
+	<div>
+		 <img alt="두비두바" src="./images/dubdub.jpg" width="300px">
+	</div>
+	
+	<div>
+		<iframe 
+			src="07_content.html" height="200px" style="border: 4px solid skyblue">	
+		</iframe>
+	</div>
+	
+	<div>
+		<!-- 
+			유튜브 동영상 주소를 그냥 넣으면 유튜브가 연결을 거부하므로
+			"watch?v=" 부분을 "embed/"로 고친다.
+		 -->
+		<iframe		
+			src="https://www.youtube.com/embed/UJ9Iz7HhU-I" height="200px" style="border: 4px solid orangered">	
+		</iframe>
+	</div>
+	
+</body>
+</html>

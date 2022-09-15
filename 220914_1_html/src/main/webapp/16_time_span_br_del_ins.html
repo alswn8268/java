@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>time_span_br_del_ins</title>
+</head>
+<body>
+
+<!-- 
+	<time> 태그는 날짜나 시간을 나타내기 위한 목적으로 사용한다. => IE 지원 X
+	<time> 태그는 datetime 속성 값을 지정해서 보다 적절한 검색결과나 알림같은 특정 기능을 구현할 때 사용할 수 있다.
+	
+	<span> 태그는 아무 것도 나타내지 않는 콘텐츠 영역을 설정한다. => 스타일을 적용하기 위해 사용한다.
+	<span> 태그는 <div> 태그와 매우 유사하지만 <div>는 블록 요소, <span>은 인라인 요소다.
+	
+	<br> 태그는 줄을 바꿀 때 사용한다.
+	시작 태그(<tag>)만 있고 종료 태그(</tag>)가 없는 태그들은 <tag/> 형식으로 입력하기를 권장한다.
+	xml은 종료 태그가 필요 없으면 생략할 수 있어서, 이 경우 시작 태그의 마지막에 "/"를 붙여야 한다.
+	
+	<del> 태그는 삭제된(변경된) 텍스트의 범위를 지정한다.
+	
+	<ins> 태그는 새로 추가된(변경된) 텍스트의 범위를 지정한다.
+ -->
+	
+	<p>
+		Open from <time>10:00</time> to <time>21:00</time> every weekday
+	</p>
+	<p>
+		Open from <time datetime="2022-09-15 10:00">10:00</time> to <time>21:00</time> every weekday
+	</p>
+	
+		Open from <del>10:00</del><ins>9:00</ins> to 21:00 every weekday
+	
+</body>
+</html>

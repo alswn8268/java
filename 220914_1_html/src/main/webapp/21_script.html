@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>script</title>
+
+<!-- 외부 js 파일 가져오기 -->
+<script type="text/javascript" src="./js/21_script.js" defer="defer"></script>
+</head>
+<body>
+
+	<div id="my-name">내 사이트?</div>
+
+	<!-- 
+	<script> 태그는 동작을 지정하는 스크립트 코드를 문서에 포함하거나 외부 파일을 참조한다.
+	type="text/javascript" 속성은 생략 가능하다.
+	src 속성으로 외부 스크립트 파일의 url을 지정한다. 이 속성이 지정되면 태그에 포함된 스크립트는 무시된다.
+	defer="defer" 속성은 문서의 모든 내용이 브라우저에 표시(랜더링)된 후 자바스크립트를 읽는다.
+ -->
+
+	<!-- <script type="text/javascript">
+		const myName = document.getElementById('my-name');
+		console.log(myName);
+		console.log(myName.innerText);
+	</script> -->
+	
+<!-- 	<script type="text/javascript" src="./js/21_script.js">
+	// src 속성이 지정되면 script 태그 내부의 스크립트 코드는 무시되어 실행되지 않는다.
+		console.log('안녕하세요');	// 무시
+	</script> -->
+	
+</body>
+</html>
