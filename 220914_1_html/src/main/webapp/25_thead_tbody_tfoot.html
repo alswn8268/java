@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>thead_tbody_tfoot</title>
+</head>
+<body>
+
+	<!-- 
+	<thead> 태그는 테이블을 구성하는 머릿글 행을 정의한다. 보통 첫 행
+	<tbody> 태그는 테이블을 구성하는 본문 행을 정의한다. 자동으로 생성된다.
+	<tfoot>	태그는 테이블을 구성하는 바닥글(요약) 행을 정의한다. 보통 마지막 행
+	<thead>, <tbody>, <tfoot>를 정의하지 않으면, <tbody>로 자동 정의된다.
+	 -->
+
+	<table>
+		<caption>Fruits</caption>
+		<colgroup>
+			<col span="2" style="background-color: lightskyblue" />
+			<col style="background-color: lightsalmon" />
+		</colgroup>
+
+		<!-- 머릿글 행 -->
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>Name</th>
+				<th>Price</th>
+			</tr>
+		</thead>
+		<!-- 본문 행 -->
+		<tbody>
+			<tr>
+				<td>A1234</td>
+				<td>Apple</td>
+				<td>1,000원</td>
+			</tr>
+			<tr>
+				<td>B1234</td>
+				<td>Banana</td>
+				<td>5,000원</td>
+			</tr>
+		</tbody>
+
+		<!-- 바닥글(요약) 행 -->
+		<tfoot>
+			<tr>
+				<td colspan="2">Total</td>
+				<td>6,000원</td>
+			</tr>
+		</tfoot>
+	</table>
+
+</body>
+</html>

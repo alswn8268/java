@@ -1,0 +1,17 @@
+table {
+	/* 셀 사이의 빈 여백을 없애고 합쳐진다. */
+	border-collapse: collapse;
+}
+
+tr {
+	height: 80px;
+}
+
+th {
+	background-color: lightsalmon;
+	border: 2px dashed olive;
+}
+
+td {
+	font-family: 평창체;
+}

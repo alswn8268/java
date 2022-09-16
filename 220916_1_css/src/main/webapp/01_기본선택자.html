@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>기본선택자</title>
+
+<!-- 스타일 초기화 cdn -->
+<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+<style type="text/css">
+
+/* 전체 선택자: "*"이 전체 선택자이고 모든 요소를 선택한다. */
+* {
+	color: skyblue;
+}
+
+/* 태그 선택자: 태그 이름이 선택자이다. */
+li {
+	color: salmon;
+}
+
+/* 
+		클래스 선택자: class 속성의 값이 선택자이다. "."으로 시작한다. 여러 군데 사용 가능하다.
+		클래스 선택자 앞에 태그 선택자를 사용하면 특정 태그의 클래스 선택자에만 스타일을 적용시킬 수 있다.
+	*/
+.orange {
+	color: olive;
+}
+
+/* 아이디 선택자: id 속성의 값이 선택자이다. "#"으로 시작한다. 문서중 한 군데만 사용이 가능하다. */
+#orange {
+	color: orange;
+}
+</style>
+
+</head>
+<body>
+
+	<div>
+		<ul>
+			<li>사과</li>
+			<li>딸기</li>
+			<li id="orange" class="orange">오렌지</li>
+		</ul>
+		<div>당근</div>
+		<p>토마토</p>
+		<span class="orange">레몬</span>
+	</div>
+
+</body>
+</html>

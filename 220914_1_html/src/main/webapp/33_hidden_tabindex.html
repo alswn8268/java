@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>hidden_tabindex</title>
+</head>
+<body>
+
+<!-- 
+	<input> 태그에 type="hidden" 속성을 사용하면 컨트롤이 화면에 표시되지 않는다.
+	<form>에 hidden 속성을 지정하면 폼 전체가 화면에 표시되지 않는다.
+ -->	
+
+	<form action="?" method="get">
+		이름: <input type="text" name="name"/><br/>
+		아이디: <input type="hidden" name="id" value="필요한 정보인데 사용자가 볼 필요는 없는 정보"/><br/>
+		<input type="submit" value="전송">
+	</form><br/>
+
+	<!-- 숨겨진 폼 -->
+	<form action="?" method="get" hidden>
+		이름2: <input type="text" name="name"/><br/>
+		아이디2: <input type="hidden" name="id" value="필요한 정보인데 사용자가 볼 필요는 없는 정보"/><br/>
+		<input type="submit" value="전송">
+	</form> 
+	
+	<!-- draggable="true" 속성을 지정하면 텍스트를 드래그할 수 없다. -->
+	<div draggable="true">드래그 해보세요</div>
+	<div>드래그 해보세요</div>
+	
+<!-- 
+	tabindex 속성은 tab 키를 이용해 순차적으로 포커스를 이동시키는 순서를 지정한다.
+ -->	
+
+	<input type="text" value="1" tabindex="2"/>
+	<input type="text" value="2" tabindex="5"/>
+	<input type="text" value="3" tabindex="4"/>
+	<input type="text" value="4" tabindex="1"/>
+	<input type="text" value="5" tabindex="0"/>
+
+</body>
+</html>

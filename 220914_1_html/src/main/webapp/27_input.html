@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>input</title>
+</head>
+<body>
+
+<!--
+   <input /> => 사용자에게 입력 받을 데이터 양식.
+   autocomplete: 사용자가 이전에 입력한 값으로 자동 완성 기능을 사용할 것인지 여부, on(기본값), off
+   autofocus: 페이지가 로드될 때 자동으로 포커스, 문서 내 고유해야 함
+   checked: 양식이 선택되었음을 표시, type 속성 값이 radio, checkbox일 경우만 사용
+   disabled: 양식을 비활성화
+   form: <form>의 id 속성 값, 해당 <form>의 후손이 아닐 경우만
+   list: 참조할 <datalist>의 id 속성 값
+   max: 지정 가능한 최대 값, type 속성 값이 number일 경우만, min속성보다 큰 값만 허용
+   min: 지정 가능한 최소 값, type 속성 값이 number일 경우만, max속성보다 작은 값만 허용
+   maxlength: 입력 가능한 최대 문자 수, type 속성 값이 text, email, password, tel, url일 경우만
+   multiple: 둘 이상의 값을 입력 할 수 있는지 여부, type 속성 값이 email, file일 경우만, email일 경우 ','로 구분
+   name: 양식의 이름         
+   placeholder: 사용자가 입력할 값의 힌트, type 속성 값이 text, search, tel, url, email일 경우만
+   readonly: 수정 불가한 읽기 전용
+   step: 유효한 증감 숫자의 간격, type 속성 값이 number, range일 경우만
+   src: 이미지의 URL, type 속성 값이 image일 경우만
+   alt: 이미지의 대체 텍스트, type 속성 값이 image일 경우만
+   type: 입력 받을 데이터의 종류
+   value: 양식의 초기 값
+   
+   데이터 종류(Type)의 값(Values)
+   button: 일반 버튼
+   checkbox: 체크박스   
+   color: 색상, IE 지원 불가
+   email: 이메일   
+   file: 파일   
+   hidden: 보이지 않지만 전송할 양식, value 속성으로 값을 지정
+   image: 이미지 제출 버튼, <img />처럼 사용
+   number: 숫자   
+   password: 비밀번호, 가려지는 양식
+   radio: 라디오 버튼, 같은 name 속성 그룹 내 하나만 선택 가능
+   range: 범위 컨트롤, min, max, step, value(기본값) 속성 사용
+   reset: 초기화 해당 <form> 범위 내 모든 양식
+   search: 검색   
+   submit: 제출 버튼, 해당 <form> 범위 내 고유한 양식
+   tel: 전화번호   
+   text: 일반 텍스트   
+   url: 절대 URL
+-->
+	
+	<!-- input 태그가 form 태그 내부에 있지 않아도 form 속성으로 지정한 form과 연결할 수 있다. -->
+	form 외부: <input type="text" name="jumin" placeholder="주민번호 앞 자리를 입력해주세요." maxlength="6" form="myinfo"/>
+
+	<form id="myinfo" action="?" method="get" novalidate="novalidate">
+	
+		이메일: <input type="email" name="id" autofocus="autofocus"/><br/>
+		<!-- 키보드로 한글을 입력할 수 없다. -->
+		비밀번호: <input type="password" name="pw"/><br/>
+		나이1: <input type="number" name="age1" value="0" readonly="readonly"/><br/>
+		<!-- disabled 속성이 지정되면 입력된 값이 action 페이지로 전달되지 않는다. -->
+		나이2: <input type="number" name="age2" value="0" disabled="disabled"/><br/>
+		나이3: <input type="number" name="age3" placeholder="나이를 입력하세요."/><br/>
+		나이4: <input type="number" name="age4" min="0" max="30"/><br/>
+		나이5: <input type="number" name="age5" value="0" step="3"/><br/>
+		
+		취미<br/>
+		<!-- checkbox, radio는 같은 그룹끼리 같은 name 속성을 지정해야 한다. -->
+		<!-- checkbox, radio는 데이터 입력 기능이 없으므로 value 속성으로 넘겨줄 데이터를 넣어야 한다. -->
+		공부 <input type="checkbox" name="hobbies" value="공부">
+		독서 <input type="checkbox" name="hobbies" value="독서">
+		명상 <input type="checkbox" name="hobbies" value="명상"><br/>
+		
+		성별<br/>
+		남자 <input type="radio" name="gender" value="남자">
+		여자 <input type="radio" name="gender" value="여자"><br/>
+		<!-- <input> 태그에 type="image"를 지정하면 type="submit" 속성이 지정된 것과 같은 기능을 한다. -->
+		이미지 submit 버튼: <input type="image" name="image" src="./images/dubdub.jpg" width="200px"><br/>
+		<input type="submit" value="로그인"/>
+		<input type="reset" value="다시 쓰기"/>
+	
+	</form>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

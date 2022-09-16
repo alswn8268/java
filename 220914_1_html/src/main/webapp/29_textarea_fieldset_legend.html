@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>textarea_fieldset_legend</title>
+</head>
+<body>
+
+<!-- 
+	<textarea> 태그는 여러 줄 텍스트 입력 컨트롤을 나타낸다.
+	rows: 줄의 개수
+	cols: 칸의 개수
+	<textarea> 태그는 value 속성이 없다. 값을 넣어주려면 <textarea> ~ </textarea> 사이에 입력한다.
+ 	<textarea> 태그는 컨트롤 오른쪽 아래를 드래그하면 컨트롤의 크기가 변경된다.
+ 	<textarea> 태그 컨트롤의 크기가 변경되지 않게 하려면 style="resize:none;" 스타일을 지정한다.
+ -->
+
+	<input type="text" name="name" value="홍길동"/><br/>
+	<textarea rows="10" cols="50" name="content" style="resize: none;">여기에 입력하는 내용이 value 이다.</textarea>
+	<br/>
+
+<!-- 
+	<fieldset> 태그는 웹 양식의 여러 컨트롤을 같은 레이블로 묶을 때 사용한다.
+	<fieldset> 태그는 블록 요소이므로, style="width:~~~"로 길이를 조절한다.
+	
+	<legend> 태그는 <fieldset> 태그로 묶은 그룹의 이름을 나타낼 때 사용한다.
+ -->
+	
+	<fieldset style="width:150px;">
+	<legend>성별</legend>
+		남자<input type="radio" name="gender" value="남자"/>
+		여자<input type="radio" name="gender" value="여자"/>
+	</fieldset>
+
+	<fieldset style="width:200px;">
+	<legend>취미</legend>
+		독서<input type="checkbox" name="hobbies" value="독서"/>
+		게임<input type="checkbox" name="hobbies" value="게임"/>
+		차<input type="checkbox" name="hobbies" value="차"/>
+	</fieldset>
+
+</body>
+</html>
