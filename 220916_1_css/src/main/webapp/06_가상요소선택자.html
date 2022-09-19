@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>가상 요소 선택자</title>
+
+<style type="text/css">
+
+	* {
+		font-family: 평창체;
+	}
+	/* 
+		가상 클래스 선택자는 ":"으로 선택하고 가상 요소 선택자는 "::"으로 선택한다.
+		before: 요소의 내부 앞에 내용(content)을 삽입하고 스타일을 지정한다.
+		after:요소의 내부 뒤에 내용(content)을 삽입하고 스타일을 지정한다.
+	*/	
+
+	ul li::before {
+		/* 선택된 요소 앞에 들어갈 내용을 여기(content 속성)에 넣어준다. */
+		content: "숫자";
+		/* content 속성에 지정한 내용의 스타일을 지정한다. */
+		font-weight: bold;
+		color: salmon;
+		margin-right: 20px;
+	}
+	
+	ul li::after {
+		/* css에 이미지를 넣으려는 경우 url() 함수를 사용해서 넣는다.
+			크기 조절 없이 이미지만 넣으려면 content 속성에 바로 넣으면 된다. */
+		/* content: url("./images/android.png"); */
+		
+		/* 이미지 크기를 조절해서 넣으려면 아래와 같은 과정을 거친다. */
+		content: "";
+		background-image: url("./images/android.png");
+		background-size: 25px 25px; /* content 영역에 표시될 이미지 크기 지정 */
+		width: 25px; /* 이미지가 표시될 content 영역의 가로 크기 지정 */
+		height: 25px; /* 이미지가 표시될 content 영역의 세로 크기 지정 */
+		display: inline-block;
+	}
+	
+	ul, ol {
+		list-style-type: none; /* 리스트 앞의 표식을 없앤다. */
+	}
+	
+	ol li:before {
+		content: "";
+		width: 10px;
+		height: 10px;
+		background-color: skyblue;
+		display: inline-block;
+		margin-right: 10px;
+		border-radius: 20%;
+	}
+	
+	div::before {
+		content: "<"
+	}
+	div::after {
+		content: ">"
+	}
+
+</style>
+
+</head>
+<body>
+	<ul>
+		<li>1
+			<img src="./images/1.jpg" width="300px"/>
+		</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+		<li>5</li>
+		<li>6</li>
+		<li>7</li>
+		<li>8</li>
+		<li>9</li>
+		<li>10</li>
+	</ul>
+
+	<ol>
+		<li>1
+			<img src="./images/1.jpg" width="300px"/>
+		</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+		<li>5</li>
+		<li>6</li>
+		<li>7</li>
+		<li>8</li>
+		<li>9</li>
+		<li>10</li>			
+	</ol>
+	
+	<div>div</div>
+	
+</body>
+</html>

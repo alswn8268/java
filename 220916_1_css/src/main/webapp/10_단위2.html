@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>단위</title>
+<style type="text/css">
+
+	* {
+		font-family: 평창체;
+	}
+
+	/* 
+		px(픽셀): 고정 크기
+		%: 비율, 부모 요소의 영향을 받는다.
+		em: 자기 자신의 폰트 크기의 영향을 받는다.
+		rem(=root em): 가장 조상 요소(<html>)의 폰트 크기의 영향을 받는다.
+	 */
+	
+	div {
+	
+	}
+	
+	html {
+		font-size: 10px;
+	}
+	
+	body * {
+		border: 2px solid dodgerblue;
+	}
+	
+	.container {
+		font-size: 10px;
+	/* 	width: 600px; */
+	
+	/* container 클래스의 font-size의 60배*/
+		width: 60em;	
+	}
+
+	.parent {
+	/* 	width: 300px; */
+	/* 	width: 50%; */ /* 부모 요소인 .container의 너비의 50% */
+	/* 	width: 30em; */ /* 부모 요소에서 상속받은 font-size가 10px일 경우 300px */
+		font-size: 2em; /* 부모 요소에서 상속받은 font-size가 10px일 경우 20px */
+		width: 15em; /* font-size가 2em(20px)이므로 300px */
+	}
+	
+	.child {
+	/* 	width: 150px; */
+	/* 	width: 50%; */ /* 부모 요소인 .parent의 너비의 50% */
+		width: 7.5em; /* 부모 요소에서 상속받은 font-size가 20px일 경우 150px */
+		font-size: 2em; /* 부모 요소에서 상속받은 font-size가 20px일 경우 40px */
+	/* 	width: 3.75em; */
+		width: 15rem; /* html의 폰트 사이즈가 10px일 경우 150ㅔㅌ */
+		
+	}
+	
+</style>
+
+</head>
+<body>
+
+	<div class="container">
+		Container
+		<div class="parent">
+			Parent
+			<div class="child">Child1</div>
+			<div class="child">Child2</div>
+		</div>
+	</div>
+
+</body>
+</html>

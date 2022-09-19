@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>가상 클래스 선택자</title>
+
+<style type="text/css">
+
+	/* nth-child: 선택자가 형제 요소 중 n번째 요소라면 선택한다. */
+	/* 인덱스는 nth-child(index)와 같이 지정하고, 인덱스는 1부터 시작된다. */
+	.fruits1 li:nth-child(3) {
+		color: salmon;
+	}
+	
+	/* 연산
+		()안에 "n"을 사용하면 0부터 시작해서 1씩 증가된다.
+		"n"을 이용한 곱셈 연산시 "*" 연산자는 사용하지 않고, "n"앞에 숫자가 위치해야 한다.
+		"n"을 이용한 덧셈, 뺄셈 연산시 연산자를 사용해야 하고, "n" 뒤에 숫자가 위치해야 한다.
+	*/
+	.fruits2 li:nth-child(2n) {	/* 짝수 번째 모든 요소 선택 */
+		color: skyblue;
+	}
+	
+	.fruits2 li:nth-child(2n + 1) { /* 홀수 번째 모든 요소 선택 */
+		color: darkseagreen;
+	}
+	
+	.fruits3 li:nth-child(n + 3) { /* 3번째 이후 모든 요소 선택 */
+		color: sandybrown;
+	}	
+	
+	/* fruits4 class의 1번째 자식 요소가 p 태그가 아니고 div 태그이므로 선택되지 않는다. */
+	.fruits4 p:nth-child(1) {
+		color: yellow; 		
+	}
+	/* 1번째 p 태그를 선택하려면 태그 순서가 아니라 전체 자식(자손)의 순서로 선택해야 한다. */
+	.fruits4 p:nth-child(2) {
+		color: yellow; 		
+	}
+	
+	/* box-group class의 자손 요소 중 div 태그의 첫 번째 자식 요소를 선택한다. */
+/* 	.box-group div:first-child{	 */
+	/* box-group class의 자식 요소 중 div 태그의 첫 번째 자식 요소를 선택한다. */
+/* 	.box-group > div:first-child{ */
+	/* box-group class의 자손 요소 중 첫 번째 자식 요소를 선택한다. */
+	.box-group :first-child {
+		color: palevioletred;
+		font-weight: bold;
+	}	
+	
+		
+</style>
+
+</head>
+<body>
+
+	<ul class="fruits1">
+		<li>딸기</li>
+		<li>사과</li>
+		<li>복숭아</li>
+		<li>오렌지</li>
+	</ul>
+	<hr/>
+		
+	<ul class="fruits2">
+		<li>딸기</li>
+		<li>사과</li>
+		<li>복숭아</li>
+		<li>오렌지</li>
+	</ul>
+	<hr/>
+
+	<ul class="fruits3">
+		<li>딸기</li>
+		<li>사과</li>
+		<li>복숭아</li>
+		<li>오렌지</li>
+	</ul>
+	<hr/>
+
+	<ul class="fruits4">
+		<div>딸기</div>
+		<p>사과</p>
+		<p>복숭아</p>
+		<span>오렌지</span>		
+	</ul>
+	<hr/>
+	
+	<div class="box-group">
+		<div>1</div>
+		<div>2</div>
+		<div>3
+			<p>3-1</p>
+			<div>3-2</div>
+			<div>3-3</div>
+		</div>
+	</div>
+	
+</body>
+</html>

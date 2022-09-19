@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>속성선택자</title>
+
+<style type="text/css">
+
+	/* [속성이름]: [] 안에 지정한 속성이 설정된 요소를 선택한다. */
+	[disabled] {
+		opacity: 0.5; /* 투명도, 기본값은 1이고 0으로 가까워질수록 투명해진다. */
+	}
+	
+	/* [속성이름="속성값"]: [] 안에 지정한 속성과 속성값이 일치하는 요소를 선택한다. */
+	[type="password"] {
+		font-weight: bold;
+		border-radius: 5px;
+	}
+	
+	/* [속성이름^="속성값"]: [] 안에 지정한 값으로 속성값이 시작하는 요소를 선택한다. */
+	[class^="btn"] {
+		font-weight: bold;
+		border-radius: 5px;
+	}
+
+	/* [속성이름$="속성값"]: [] 안에 지정한 값으로 속성값이 끝나는 요소를 선택한다. */
+	[class$="success"] {
+		color: skyblue;
+	}
+	[class$="danger"] {
+		color: orange;
+	}
+
+</style>
+
+</head>
+<body>
+	
+	<input type="text" value="홍길동"/>
+	<input type="password" value="1234"/>
+	<input type="text" value="disabled text" disabled="disabled"/><br/>
+	
+	<button class="btn-success" type="button">Success</button>
+	<button class="btn-danger" type="button">Danger</button>
+	<button class="button">Normal</button>
+		
+</body>
+</html>
