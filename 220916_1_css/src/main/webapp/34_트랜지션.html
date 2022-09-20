@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>트랜지션</title>
+
+<style type="text/css">
+
+	/* 
+		transition: css 속성의 시작과 끝을 지정(전환 효과)하여 애니메이션 효과를 낸다.
+		
+		transition-property: 전환 효과를 사용할 속성 이름
+			=> all: 기본값, 모든 속성에 적용
+			=> 속성이름: 전환 효과에 사용할 속성 이름
+			=> transition-duration 속성이 지정되어야 transition-property 속성 지정 여부를 확인할 수 있다.
+		transition-duration: 전환 효과 지속 식나 설정
+			=> 0s: 기본값(전환 효과 없음)
+			=> 전환 시간은 초(s)나 밀리초(ms) 단위로 입력
+		transition-timing-function: 타이밍 함수(easing 함수)는 애니메이션 전환 효과를 표현하는 방법
+			=> ease: 기본값, 빠르게 -> 느리게
+			=> linear: 일정하게
+			=> ease-in: 느리게 -> 빠르게
+			=> ease-out: 빠르게 -> 느리게
+			=> ease-in-out: 느리게 -> 빠르게 -> 느리게
+		transition-delay: 0s가 기본값이고 전환 효과의 대기(지연)시간을 설정한다.		
+	 */
+
+	.box {
+		width: 100px;
+		height: 100px;
+		background-color: peachpuff;
+		margin: 50px;
+		
+		/* transition-property: width, height, background-color;
+		transition-duration: 1.5s;		
+		transition-timing-function: ease-in;
+		transition-delay: 0.5s; */
+		
+		/* transition: property duration timing-function delay; */ /* 단축 속성 */
+		transition: background-color 1.5s ease-in-out 0.5s, width 1.5s ease-in-out 0.5s, height 1.5s ease-in-out 0.5s;
+	}	
+
+	.box:hover {
+		width: 300px;
+		height: 300px;
+		background-color: powderblue;
+	}
+
+</style>
+
+</head>
+<body>
+
+	<div class="box"></div>
+
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>배경</title>
+
+<style type="text/css">
+
+	/* 
+		background-attachment: 배경 이미지의 스크롤 여부를 지정한다.
+			=> scroll: 기본값, 배경 이미지가 요소를 따라서 같이 스크롤된다.
+			=> fixed: 배경 이미지가 뷰 포트에 고정되어 요소와 같이 스크롤 되지 않는다.
+			=> local: 요소 내 스크롤시 배경 이미지가 같이 스크롤 된다.
+		background-size
+			=> auto: 기본값, 배경 이미지의 원래 크기로 표시된다.
+			=> 단위: px, em, % 등을 단위로 지정하고 width height 형태로 입력한다.
+				=> width나 height 중 하나만 입력하면 원본 비율로 수정된다.
+			=> cover: 배경 이미지가 크기 비율을 유지하며 width와 height 중에 더 넓은 너비에 맞춰진다.
+	 */
+
+	div {
+		height: 300px;
+		border: 2px solid peachpuff; 
+	}
+
+	.box3 {
+		width: 1500px;
+		height: 300px;		
+		background-image: url("./images/mob_fav_prod_bg_new.jpg");
+		background-attachment: fixed;
+		background-size: 1500px;
+	}
+
+	section {
+		height: 300px;
+		border: 2px solid peachpuff; 
+		background-color: lightgray;
+	}
+
+	.section3 {
+		width: 1500px;
+		height: 300px;		
+		background-image: url("./images/jumbotronBackground.jpg");
+		background-attachment: fixed;
+		background-size: 1500px;
+		background-repeat: no-repeat;
+	}
+
+	.container {
+		width: 400px;
+		height: 300px;
+		border: 4px solid skyblue;
+		background-image: url("./images/jumbotronBackground.jpg");
+		overflow: auto; 
+		background-attachment: local;
+		background-size: 100%;
+	}
+	 
+	.for-scroll {
+		height: 2000px;
+	} 
+	
+	.box {
+		width: 400px;
+		height: 300px;
+		border: 2px solid powderblue;
+		background-image: url(./images/android.png);
+		background-repeat: no-repeat;
+		margin: 50px;
+		/* 가로, 세로 크기를 이미지 비율에 맞게 정확히 지정해야 한다.*/
+		/* background-size: 200px 100px; */
+		/* 가로 크기만 지정하면 세로 크기는 비율에 맞게 자동으로 지정된다. */
+		/* background-size: 192px; */
+		/* cover는 가로, 세로 중 넓은 크기에 이미지를 맞추기 때문에 이미지가 잘려 보일 수 있다.*/
+		/* background-size: cover; */
+		/* contain은 가로, 세로 중 좁은 크기에 이미지를 맞추기 때문에 공백이 보일 수 있다.*/
+		background-size: contain;
+	}
+
+</style>
+
+</head>
+<body>
+
+	<div class="box1"></div>
+	<div class="box2"></div>
+	<div class="box3"></div>
+	<div class="box4"></div>
+	<div class="box5"></div>
+
+	<section class="section1"></section>
+	<section class="section2"></section>
+	<section class="section3"></section>
+	<section class="section4"></section>
+	<section class="section5"></section>
+
+	<div class="container">
+		<div class="for-scroll">
+		</div>
+	</div>
+	
+	<div class="box"></div>
+
+</body>
+</html>
