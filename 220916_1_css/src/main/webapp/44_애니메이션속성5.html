@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>애니메이션 속성</title>
+
+	<style type="text/css">
+	
+		/* animation-play-state: 애니메이션의 재생과 정지를 설정한다.
+				=> running: 기본값, 애니메이션을 동작시킨다.
+				=> paused: 애니메이션을 일시 정지시킨다.
+		 */
+	
+	.box {
+	 	width: 150px;
+	 	height: 100px;
+	 	background-color: skyblue;
+	 	color: white;
+	 	display: flex;
+	 	font-size: 30px;
+	 	font-family: 평창체;
+	 	justify-content: center;
+	 	align-items: center;
+	 	animation: ani 3s linear infinite alternate;
+	 }
+		
+	.box::before {
+		content: "running";
+	}
+
+	.box:hover::before {
+		content: "pause";
+		color: lemonchiffon;
+	}		
+	
+	.box:hover {
+		animation-play-state: paused;
+	}
+		
+	@keyframes ani {
+		0% {
+		 	width: 150px;			
+		}
+		100% {
+			width: 100%;
+		}
+	}
+	
+	</style>
+
+</head>
+<body>
+
+	<div class="box"></div>
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>애니메이션 속성</title>
+
+<style type="text/css">
+
+	/* 
+		animation-iteration-count: 애니메이션의 반복 횟수를 지정한다. 
+			=> 숫자: 반복 횟수를 지정한다. 1이 기본 값
+			=> infinite: 무한 반복
+		animation-direction : 애니메이션 반복 방향을 설정한다.
+			=> normal: 기본 값, 정방향으로 실행한다.
+			=> reverse: 역방향으로 실행한다.
+			=> alternate: 정방향으로 실행한 후 역방향으로 실행한다. => 정방향 왕복
+			=> alternate-reverse: 역방향으로 실행한 후 정방향으로 실행한다. => 역방향 왕복
+			
+	 */
+	 
+	 .box {
+	 	width: 100px;
+	 	height: 100px;
+	 	background-color: skyblue;
+	 	animation: ani 4s infinite ease-in;
+	 }
+	  
+	 @keyframes ani {
+	 	0% {
+	 		transform: translate(0px, 0px);
+	 	}	 		
+	 	25% {
+	 		transform: translate(100px, 0px);	 	
+	 		background-color: peachpuff;
+	 	}
+	 	50% {
+	 		transform: translate(100px, 100px);	 		 	
+	 		background-color: lemonchiffon;
+	 	}
+	 	75% {	 	
+	 		transform: translate(0px, 100px);	 		 	
+	 		background-color: yellowgreen;
+	 	}
+	 	100% {
+	 		transform: translate(0px, 0px);	 		 		 	
+	 	}
+	 }
+
+</style>
+
+</head>
+<body>
+
+	<div class="box"></div>
+
+</body>
+</html>
