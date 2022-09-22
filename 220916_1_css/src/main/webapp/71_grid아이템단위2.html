@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>grid 아이템 단위</title>
+
+<style type="text/css">
+
+	/* 
+		auto-fill, auto-fit: 행, 열 개수를 grid 컨테이너 및 행, 열의 크기에 맞게 자동으로 조절한다.
+			=> repeat() 함수와 같이 사용하며 행, 열과 item의 개수가 명확할 필요가 없거나 명확하지 않은 경우 유용하다.	=> 반응형 그리드
+			
+		auto-fill과 auto-fit의 차이점
+			=> auto-fill은 컨테이너의 남는 공간을 그대로 유지하고, auto-fit은 축소시킨다.
+			=> grid 컨테이너가 하나의 행, 열에 모든 item을 수용하고 남는 공간이 있을 때 발생된다.
+	 */
+
+	.container1{
+		width: 800px;
+		height: 200px;
+		border: 2px solid red;
+		display: grid;
+		grid-template-rows: 100px;
+		grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+	}
+	
+	.item1 {
+		border: 2px solid blue;
+	}
+
+	.container2{
+		width: 800px;
+		height: 200px;
+		border: 2px solid red;
+		display: grid;
+		grid-template-rows: 100px;
+		grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+	}
+	
+	.item2 {
+		border: 2px solid blue;
+	}
+
+	.container3{
+		width: 800px;
+		height: 200px;
+		border: 2px solid red;
+		display: grid;
+		grid-template-rows: 100px;
+		grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+	}
+	
+	.item3 {
+		border: 2px solid blue;
+	}
+
+</style>
+
+</head>
+<body>
+
+	<div class="container1">
+		<div class="item1">1</div>
+		<div class="item1">2</div>
+		<div class="item1">3</div>
+		<div class="item1">4</div>
+		<div class="item1">5</div>
+		<div class="item1">6</div>
+		<div class="item1">7</div>
+		<div class="item1">8</div>
+		<div class="item1">9</div>
+		<div class="item1">10</div>
+		<div class="item1">11</div>
+		<div class="item1">12</div>
+	</div>	
+
+	<div class="container2">
+		<div class="item2">auto-fill</div>
+		<div class="item2">auto-fill</div>
+		<div class="item2">auto-fill</div>
+		<div class="item2">auto-fill</div>
+		<div class="item2">auto-fill</div>
+	</div>	
+
+	<div class="container3">
+		<div class="item3">auto-fit</div>
+		<div class="item3">auto-fit</div>
+		<div class="item3">auto-fit</div>
+		<div class="item3">auto-fit</div>
+		<div class="item3">auto-fit</div>
+	</div>	
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>grid 컨테이너 속성</title>
+
+	<style type="text/css">
+		
+		/* 
+			grid-template-rows: 명시적 행의 크기를 정의하며 행의 이름도 정의할 수 있다.
+			grid-template-columns: 명시적 열의 크기를 정의하며 열의 이름도 정의할 수 있다.
+			fr(fraction, 공간 비율)이라는 단위를 사용할 수 있고 repeat() 함수를 사용할 수 있다.
+		 */
+		
+	.container {
+		border: 4px solid powderblue;
+		display: grid;
+		
+		/* grid-template-rows: 100px 100px 100px 100px 100px; */
+		/* repeat(반복횟수, 너비): 행 높이 또는 열 너비를 반복해서 지정할 수 있다. */
+		/* grid-template-rows: repeat(2, 100px); */
+		/* grid-template-columns: 200px 200px 200px; */
+		/* grid-template-columns: repeat(3, 100px); */
+		
+		/* 1fr 1fr => 2개의 행 또는 열이 컨테이너 전체 크기의 1 : 1 비율로 채워진다. */
+		grid-template-rows: /* 1fr 1fr */ repeat(2, 1fr);
+		grid-template-columns:/*  1fr 1fr 1fr */ repeat(3, 1fr);
+	}
+	
+	.container .item {
+		border: 4px solid peachpuff;
+	}
+		
+	</style>
+
+</head>
+<body>
+
+	<div class="container">
+		<div class="item">1</div>
+		<div class="item">2</div>
+		<div class="item">3</div>
+		<div class="item">4</div>
+		<div class="item">5</div>
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>grid 아이템 속성</title>
+
+<style type="text/css">
+
+	/* 
+		order: grid item이 배치되는 순서를 변경한다.
+			=> 기본값은 0, 음수 사용 가능, 숫자가 작을 수록 앞에 배치된다.
+			
+		z-index: grid item이 쌓이는 순서를 변경한다.
+			=> z-index가 지정되지 않은 item들은 작성된 순서대로 위로 올라오지만 z-index가 지정되면 큰 값이 위로 배치된다.
+	 */
+	 
+	.container1 {
+	 	width: 600px;
+	 	height: 400px;
+	 	border: 2px solid salmon;
+	 	display: grid;
+	 	grid-template-rows: repeat(2, 1fr);
+	 	grid-template-columns: repeat(3, 1fr); 
+	}
+	
+	.container1 .item1 {
+		width: auto;
+		height: auto;	
+		border: 2px solid skyblue;
+		font-size: 50px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}	 
+	
+	.container1 .item1:nth-child(1) {
+		order: 1;
+	}	 
+	
+	.container1 .item1:nth-child(3) {
+		order: 5;
+	}	 
+	
+	.container1 .item1:nth-child(5) {
+		order: -1;
+	}	 	
+	 
+	.container2 {
+	 	width: 600px;
+	 	height: 400px;
+	 	border: 2px solid salmon;
+	 	display: grid;
+	 	grid-template-rows: repeat(2, 1fr);
+	 	grid-template-columns: repeat(3, 1fr); 
+	}
+	
+	.container2 .item2 {
+		width: auto;
+		height: auto;	
+		border: 2px solid skyblue;
+		font-size: 50px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}	 
+
+	.container2 .item2:nth-child(1) {
+		grid-area: 1 / 1 / 2 / 3;
+		background-color: peachpuff;
+		z-index: 2;
+	}	 
+
+	.container2 .item2:nth-child(2) {
+		grid-area: 1 / 2 / 3 / 3;
+		background-color: lemonchiffon;
+		z-index: 1;
+	}	 
+	
+	.container2 .item2:nth-child(3) {
+		grid-area: 2 / 2 / 3/ 4;
+		background-color: plum;
+	}	    
+	
+</style>
+
+</head>
+<body>
+
+	<div class="container1">
+		<div class="item1">1</div>
+		<div class="item1">2</div>
+		<div class="item1">3</div>
+		<div class="item1">4</div>
+		<div class="item1">5</div>
+	</div><br/>
+
+	<div class="container2">
+		<div class="item2">1</div>
+		<div class="item2">2</div>
+		<div class="item2">3</div>
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>grid 아이템 단위</title>
+
+<style type="text/css">
+
+	/* 
+		fr: fr(fractional unit)은 사용 가능한 공간에 대한 비율을 의미한다.
+		min-content: grid item이 포함하는 내용의 최소 크기를 지정한다.
+		max-content: grid item이 포함하는 내용의 최대 크기를 지정한다.
+	 */
+ 
+	.container1 {
+		width: 900px;
+		height: 200px;
+		border: 2px solid red;
+		display: grid;
+		/* 3열에 100px을 할당하고 4열에 전체 너비의 25%를 할당한다. */
+		/* 3, 4열을 할당하고 남은 공간을, 1열에 1/3, 2열에 2/3를 할당한다. */
+		grid-template-columns: 1fr 2fr 100px 25%;
+	} 
+
+	.item1 {
+		border: 2px solid blue;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	} 
+	
+	.container2 {
+		width: 900px;
+		height: 200px;
+		border: 2px solid red;
+		display: grid;
+		/* grid-template-columns: 1fr min-content */
+		/* min-content는 문장을 나타내야 할 경우 가장 긴 단어의 너비에 맞춘다. */
+		grid-template-columns: min-content 1fr;
+	} 
+
+	.item2 {
+		border: 2px solid blue;
+	} 
+	
+	.container3 {
+		width: 900px;
+		height: 200px;
+		border: 2px solid red;
+		display: grid;
+		/* min-content는 영문은 단어 단위가 설정되는데 한글은 단어 단위가 아닌 음절 단위로 크기를 잡는다. */
+		grid-template-columns: min-content 1fr;
+		/* min-content를 한글에 정상적으로 적용되게 하려면 아래 속성을 추가한다. */
+		word-break: keep-all;
+	} 
+
+	.item3 {
+		border: 2px solid blue;
+	} 
+		
+
+</style>
+
+</head>
+<body>
+
+	<div class="container1">
+		<div class="item1">1</div>
+		<div class="item1">2</div>
+		<div class="item1">3</div>
+		<div class="item1">4</div>
+	</div>	
+
+	<div class="container2">
+		<div class="item2">Helllo Hello world</div>
+		<div class="item2">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
+		<div class="item2">3</div>
+		<div class="item2">4</div>
+	</div>	
+	
+	<div class="container3">
+		<div class="item3">동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라 만세 무궁화 삼천리 화려강산 대한사람 대한으로 길이 보전하세</div>
+		<div class="item3">2</div>
+		<div class="item3">3</div>
+		<div class="item3">4</div>
+	</div>	
+	
+</body>
+</html>
