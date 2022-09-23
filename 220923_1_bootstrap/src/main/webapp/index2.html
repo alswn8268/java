@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>부트스트랩 웹 페이지</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="./images/logo.png"/>
+<link rel="stylesheet" href="./css/bootstrap.css">
+
+<style type="text/css">
+	* {
+		font-family: 평창체;
+	}
+	
+	.jumbotron {
+		background-image: url("./images/jumbotronBackground.jpg");
+		background-size: cover;
+		color: white;
+		text-shadow: 0.2em 0.2em 0.2em black;	
+	}
+
+</style>
+
+<!-- jQuery와 bootstrap.js 파일의 스크립트를 사용해야 부트스트랩의 내비게이션 바가 작동한다. -->
+<!-- jQuery -->
+<script type="text/javascript" src="./js/jquery-3.6.1.js"></script>
+<script type="text/javascript" src="./js/bootstrap.js"></script>
+<!-- 부트스트랩 javascript -->
+
+</head>
+<body>
+	
+	<!--
+		내비게이션 바: 홈페이지의 전체적인 구성을 보여주는 역할을 하고, 내비게이션을 통해서 다른 페이지로 이동하거나 사용자가 원하는 기능을 찾아서 이동할 수 있게 한다.
+					   일반적으로 html 소스 코드의 가장 위쪽에 위치하고, 자바스크립트와 같이 사용한다.
+	 -->
+	 
+	 <!-- navbar-default를 navbar-inverse로 변경하면 내비게이션 바가 검정 바탕이 된다. -->
+	 <nav class="navbar navbar-default">
+		<div class="container-fluid"></div>	 
+		
+		<!-- 내비게이션 헤더 -->
+		<div class="navbar-header">
+			<!-- 
+				브라우저 크기가 작아졌을 때 내비게이션 영역의 내용이 표시되지 않고, 이 버튼이 표시된다.
+				버튼이 클릭되면 내비게이션 영역의 내용이 확장된다.
+				data-toggle="collapse": 이 버튼이 클릭되면 data-target 속성에 지정한 id 속성이 지정된 영역이 확장 또는 축소된다.
+			 -->
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-toggle" aria-expanded="false">
+				<!-- class="sr-only": 큰 화면에는 표시되지 않지만 검색 엔진에서는 이 클래스 내용을 읽는다. -->
+				<span class="sr-only"></span>
+				<!-- class="icon-bar": 버튼 내부에 표시할 줄의 개수만큼 지정한다. -->
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="?">메인</a>				
+		</div>
+		
+		<!-- 내비게이션 내용 -->
+		<!-- 브라우저가 작아지면 표시되지 않다가 내비게이션 헤더에 만든 버튼이 클릭되면 토글된다. -->
+		<div class="collapse navbar-collapse" id="nav-toggle">
+			
+			<!-- 내비게이션 왼쪽에 표시할 내용 -->
+			<ul class="nav navbar-nav">
+				<li class="active">	<!-- 선택된 상태로 설정한다. -->
+					<a href="#">소개</a>
+				</li>
+				<li>
+					<a href="#">강사진</a>
+				</li>		
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+						강의<span class="caret"></span> <!-- 아래 방향 세모 아이콘 -->
+					</a>
+					<ul class="dropdown-menu">
+						<li><a href="#">Java</a></li>
+						<li><a href="#">JSP</a></li>
+						<li><a href="#">HTML</a></li>
+						<li><a href="#">CSS</a></li>
+						<li><a href="#">Bootstrap</a></li>
+					</ul>
+				</li>
+			</ul>
+			
+			<!-- 검색 폼 -->
+			<form class="navbar-form navbar-left">
+				<div class="form-group">
+					<input type="text" class="form-control" placeholder="검색할 내용을 입력하세요.">
+				</div>
+				<button type="button" class="btn btn-primary">검색</button>
+			</form>
+		
+			<!-- 내비게이션 오른쪽에 표시할 내용 -->
+			<div class="nav navbar-nav navbar-right">
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+						접속하기<span class="caret"></span>
+					</a>
+					<ul class="dropdown-menu">
+						<li><a href="#">로그인</a></li>
+						<li><a href="#">회원가입</a></li>
+					</ul>
+				</li>
+			</div>
+			
+		</div>
+		
+		
+	 </nav>
+	 
+	<div class="container">
+		<div class="jumbotron">
+			<h1 class="text-center">부트스트랩 배우기</h1>
+			<p class="text-center">
+				부트스트랩을 연습합니다.
+			</p>
+			<p class="text-center">
+				<a class="btn btn-primary btn-lg" href="#" role="button">사이트로 이동</a>
+			</p>
+			
+		</div>
+	</div>
+
+
+</body>
+</html>

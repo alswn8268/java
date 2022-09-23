@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>부트스트랩 웹 페이지</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="./images/logo.png" />
+<link rel="stylesheet" href="./css/bootstrap.css">
+
+<style type="text/css">
+* {
+	font-family: pretendard;
+}
+
+.jumbotron {
+	background-image: url("./images/jumbotronBackground.jpg");
+	background-size: cover;
+	color: white;
+	text-shadow: 0.2em 0.2em 0.2em black;
+}
+</style>
+<script type="text/javascript" src="./js/jquery-3.6.1.js"></script>
+<script type="text/javascript" src="./js/bootstrap.js"></script>
+</head>
+<body>
+
+	<header>
+		<nav class="container navbar navbar-default">
+			<div class="container-fluid"></div>
+
+			<div class="navbar-header">
+
+				<button type="button" class="navbar-toggle collapsed"
+					data-toggle="collapse" data-target="#nav-toggle"
+					aria-expanded="false">
+					<span class="sr-only"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="./index5.html">메인</a>
+			</div>
+
+			<div class="collapse navbar-collapse" id="nav-toggle">
+
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="./index5.html">소개</a></li>
+					<li><a href="./instructor.html">강사진</a></li>
+					<li class="dropdown"><a href="#" class="dropdown-toggle"
+						data-toggle="dropdown" role="button" aria-haspopup="true"
+						aria-expanded="false"> 강의<span class="caret"></span>
+					</a>
+						<ul class="dropdown-menu">
+							<li><a href="./lecture.html?lectureName=C">C</a></li>
+							<li><a href="./lecture.html?lectureName=Java">Java</a></li>
+							<li><a href="./lecture.html?lectureName=Andoid">Android</a></li>
+						</ul></li>
+				</ul>
+
+				<form class="navbar-form navbar-left">
+					<div class="form-group">
+						<input type="text" class="form-control"
+							placeholder="검색할 내용을 입력하세요.">
+					</div>
+					<button type="button" class="btn btn-primary">검색</button>
+				</form>
+
+				<div class="nav navbar-nav navbar-right">
+					<li class="dropdown"><a href="#" class="dropdown-toggle"
+						data-toggle="dropdown" role="button" aria-haspopup="true"
+						aria-expanded="false"> 접속하기<span class="caret"></span>
+					</a>
+						<ul class="dropdown-menu">
+							<li><a href="./loginForm.html">로그인</a></li>
+							<li><a href="./registerForm.html">회원가입</a></li>
+						</ul></li>
+				</div>
+			</div>
+		</nav>
+	</header>
+
+	<!-- 여기부터 -->
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="panel panel-primary">
+					<div class="panel-heading">
+						<h3 class="panel-title">
+							<span class="glyphicon-pencil"></span>&nbsp;&nbsp;&nbsp;김두부T
+						</h3>
+					</div>
+
+					<div class="panel-body">
+						<div class="media">
+							<div class="media-left">
+								<img class="media-object" src="./images/2.jpg"
+									style="width: 100px;">
+							</div>
+
+							<div class="media-body">
+								<h4 class="panel-heading">김두부</h4>
+								<ul>
+									<li>2017년 12월 13일 출생</li>
+									<li>특기는 물어뜯기, 취미는 산책</li>
+									<li>매우 예민한 성격</li>
+								</ul>
+							</div>
+
+						</div>
+					</div>
+
+					<table class="table">
+						<thead>
+							<tr>
+								<td>강사명</td>
+								<td>강의 번호</td>
+								<td>강의 제목</td>
+								<td>강의 날짜</td>
+							</tr>
+						</thead>
+						<tr>
+							<td>김두부T</td>
+							<td>1</td>
+							<td><a href="./lecture.html/?lectureName=C">C언어 기초 프로그래밍</a>
+							</td>
+							<td>2022-10-15</td>
+						</tr>
+						<tr>
+							<td>김두부T</td>
+							<td>2</td>
+							<td><a href="./lecture.html/?lectureName=Java">JAVA 기초
+									프로그래밍</a></td>
+							<td>2022-12-13</td>
+						</tr>
+						<tr>
+							<td>김두부T</td>
+							<td>3</td>
+							<td><a href="./lecture.html/?lectureName=Android">안드로이드
+									언어 프로그래밍</a></td>
+							<td>2023-06-08</td>
+						</tr>
+						<tbody></tbody>
+					</table>
+
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="panel panel-primary">
+					<div class="panel-heading">
+						<h3 class="panel-title">
+							<span class="glyphicon-pencil"></span>&nbsp;&nbsp;&nbsp;자격사항
+						</h3>
+					</div>
+
+					<div class="panel-body">
+						<div class="media">
+							<div class="media-body">
+								<h4 class="panel-heading">자격증</h4>
+								<ul>
+									<li>컴퓨터활용능력 1급</li>
+									<li>운전면허 1급</li>
+									<li>정보처리기사</li>
+									<li>TOEIC 850</li>
+								</ul>
+							</div>
+													
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+		</div>
+</div>
+
+		<footer>
+			<div class="container"
+				style="background-color: #e7e7e7; color: #777;">
+
+				<div class="row">
+					<div class="col-xs-2">
+						<h5>Copyright &copy;</h5>
+						<h5>김두부(Kim du bu)</h5>
+					</div>
+					<div class="col-xs-4">
+						<h5>대표자 소개</h5>
+						<h5>
+							두부는 엄청 귀여운 강아지입니다.<br /> 2017년 12월 13일 태어난 말티즈입니다.
+						</h5>
+					</div>
+					<div class="col-xs-2">
+						<h5>내비게이션</h5>
+						<div class="list-group">
+							<a href="./index5.html" class="list-group-item">소개</a> <a
+								href="./instructor.html" class="list-group-item">강사진</a> <a
+								href="./lecture.html?lectureName=C" class="list-group-item">강의</a>
+						</div>
+					</div>
+					<div class="col-xs-2">
+						<h5>SNS</h5>
+						<div class="list-group">
+							<a href="https://youtube.com" class="list-group-item">YouTube</a>
+							<a href="https://www.instagram.com" class="list-group-item">Instagram</a> <a href="https://twitter.com/?lang=ko"
+								class="list-group-item">Twitter</a>
+						</div>
+					</div>
+					<div class="col-xs-2">
+						<h5>
+							고객센터<br />
+						</h5>
+						<h5>
+							<textarea name="content" style="resize: none;" rows="5" cols="18">문의할 내용을 입력하세요.</textarea>
+							<br /> <span class="glyphicon glyphicon-ok"></span> &nbsp; 개인정보의
+							수집과 이용에 동의합니다.
+						</h5>
+					</div>
+				</div>
+
+			</div>
+		</footer>
+</body>
+</html>

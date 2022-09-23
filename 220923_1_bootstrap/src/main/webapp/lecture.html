@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>부트스트랩 웹 페이지</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="./images/logo.png" />
+<link rel="stylesheet" href="./css/bootstrap.css">
+
+<style type="text/css">
+* {
+	font-family: pretendard;
+}
+
+.jumbotron {
+	background-image: url("./images/jumbotronBackground.jpg");
+	background-size: cover;
+	color: white;
+	text-shadow: 0.2em 0.2em 0.2em black;
+}
+</style>
+<script type="text/javascript" src="./js/jquery-3.6.1.js"></script>
+<script type="text/javascript" src="./js/bootstrap.js"></script>
+</head>
+<body>
+
+	<header>
+		<nav class="container navbar navbar-default">
+			<div class="container-fluid"></div>
+
+			<div class="navbar-header">
+
+				<button type="button" class="navbar-toggle collapsed"
+					data-toggle="collapse" data-target="#nav-toggle"
+					aria-expanded="false">
+					<span class="sr-only"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="./index5.html">메인</a>
+			</div>
+
+			<div class="collapse navbar-collapse" id="nav-toggle">
+
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="./index5.html">소개</a></li>
+					<li><a href="./instructor.html">강사진</a></li>
+					<li class="dropdown"><a href="#" class="dropdown-toggle"
+						data-toggle="dropdown" role="button" aria-haspopup="true"
+						aria-expanded="false"> 강의<span class="caret"></span>
+					</a>
+						<ul class="dropdown-menu">
+							<li><a href="./lecture.html?lectureName=C">C</a></li>
+							<li><a href="./lecture.html?lectureName=Java">Java</a></li>
+							<li><a href="./lecture.html?lectureName=Android">Android</a></li>
+						</ul></li>
+				</ul>
+
+				<form class="navbar-form navbar-left">
+					<div class="form-group">
+						<input type="text" class="form-control"
+							placeholder="검색할 내용을 입력하세요.">
+					</div>
+					<button type="button" class="btn btn-primary">검색</button>
+				</form>
+
+				<div class="nav navbar-nav navbar-right">
+					<li class="dropdown"><a href="#" class="dropdown-toggle"
+						data-toggle="dropdown" role="button" aria-haspopup="true"
+						aria-expanded="false"> 접속하기<span class="caret"></span>
+					</a>
+						<ul class="dropdown-menu">
+							<li><a href="./loginForm.html">로그인</a></li>
+							<li><a href="./registerForm.html">회원가입</a></li>
+						</ul></li>
+				</div>
+			</div>
+		</nav>
+	</header>
+
+	<!-- 
+		리스트 그룹: 같은 성질을 목록을 담는 그룹을 의미하는 클래스로 각각의 정보는 자유롭게 링크를 가지는 형태로 들어갈 수 있다. Bootstrap에서는 단순히 클래스로 지정해주면 즉시 사용이 가능하다.
+	 -->
+
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="panel panel-primary">
+					<div class="panel-heading">
+						<h3 class="panel-title">
+							<span class="glyphicon-pencil"></span>&nbsp;&nbsp;&nbsp;강의 목록
+						</h3>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-lg-12">
+				<ul class="list-group">
+					<a class="list-group-item active" href="#">1강. Hello World!</a>
+					<a class="list-group-item" href="./lecture_C_02.html">2강. 상수와 변수</a>
+					<a class="list-group-item" href="#">3강. 데이터 타입</a>
+					<a class="list-group-item" href="#">4강. 연산자</a>
+					<a class="list-group-item" href="#">5강. 제어문</a>
+				</ul>
+			</div>
+		</div>
+
+		<!--
+		유튜브 동영상 링크 설정: Bootstrap은 자신의 웹사이트에 유튜브 동영상을 불러오는 embed-responsive-item 클래스를 제공한다. 자동으로 반응형 웹 디자인이 적용되어 효율적인 웹 사이트를 구성할 수 있다. 
+	 -->
+
+		<div class="row">
+			<div class="col-lg-12 embed-responsive embed-responsive-16by9">
+
+				<!-- 유튜브 연결하기 -->
+				<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/n6dNT9P53z0"></iframe>
+				<!-- https://www.youtube.com/watch?v=n6dNT9P53z0 -->
+			</div>
+		</div>
+
+	</div>
+
+
+	<footer>
+		<div class="container" style="background-color: #e7e7e7; color: #777;">
+
+			<div class="row">
+				<div class="col-xs-2">
+					<h5>Copyright &copy;</h5>
+					<h5>김두부(Kim du bu)</h5>
+				</div>
+				<div class="col-xs-4">
+					<h5>대표자 소개</h5>
+					<h5>
+						두부는 엄청 귀여운 강아지입니다.<br /> 2017년 12월 13일 태어난 말티즈입니다.
+					</h5>
+				</div>
+				<div class="col-xs-2">
+					<h5>내비게이션</h5>
+					<div class="list-group">
+						<a href="./index5.html" class="list-group-item">소개</a> <a
+							href="./instructor.html" class="list-group-item">강사진</a> <a
+							href="./lecture.html?lectureName=C" class="list-group-item">강의</a>
+					</div>
+				</div>
+				<div class="col-xs-2">
+					<h5>SNS</h5>
+					<div class="list-group">
+						<a href="https://youtube.com" class="list-group-item">YouTube</a>
+						<a href="https://www.instagram.com" class="list-group-item">Instagram</a>
+						<a href="https://twitter.com/?lang=ko" class="list-group-item">Twitter</a>
+					</div>
+				</div>
+				<div class="col-xs-2">
+					<h5>
+						고객센터<br />
+					</h5>
+					<h5>
+						<textarea name="content" style="resize: none;" rows="5" cols="18">문의할 내용을 입력하세요.</textarea>
+						<br /> <span class="glyphicon glyphicon-ok"></span> &nbsp; 개인정보의
+						수집과 이용에 동의합니다.
+					</h5>
+				</div>
+			</div>
+
+		</div>
+	</footer>
+
+</body>
+</html>

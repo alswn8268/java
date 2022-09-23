@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>부트스트랩 웹 페이지</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="./images/logo.png" />
+<link rel="stylesheet" href="./css/bootstrap.css">
+
+<style type="text/css">
+* {
+	font-family: 평창체;
+}
+
+.jumbotron {
+	background-image: url("./images/jumbotronBackground.jpg");
+	background-size: cover;
+	color: white;
+	text-shadow: 0.2em 0.2em 0.2em black;
+}
+</style>
+<script type="text/javascript" src="./js/jquery-3.6.1.js"></script>
+<script type="text/javascript" src="./js/bootstrap.js"></script>
+</head>
+<body>
+
+	<header>
+		<nav class="container navbar navbar-default">
+			<div class="container-fluid"></div>
+
+			<div class="navbar-header">
+
+				<button type="button" class="navbar-toggle collapsed"
+					data-toggle="collapse" data-target="#nav-toggle"
+					aria-expanded="false">
+					<span class="sr-only"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="?">메인</a>
+			</div>
+
+			<div class="collapse navbar-collapse" id="nav-toggle">
+
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="#">소개</a></li>
+					<li><a href="#">강사진</a></li>
+					<li class="dropdown"><a href="#" class="dropdown-toggle"
+						data-toggle="dropdown" role="button" aria-haspopup="true"
+						aria-expanded="false"> 강의<span class="caret"></span>
+					</a>
+						<ul class="dropdown-menu">
+							<li><a href="#">Java</a></li>
+							<li><a href="#">JSP</a></li>
+							<li><a href="#">HTML</a></li>
+							<li><a href="#">CSS</a></li>
+							<li><a href="#">Bootstrap</a></li>
+						</ul></li>
+				</ul>
+
+				<form class="navbar-form navbar-left">
+					<div class="form-group">
+						<input type="text" class="form-control"
+							placeholder="검색할 내용을 입력하세요.">
+					</div>
+					<button type="button" class="btn btn-primary">검색</button>
+				</form>
+
+				<div class="nav navbar-nav navbar-right">
+					<li class="dropdown"><a href="#" class="dropdown-toggle"
+						data-toggle="dropdown" role="button" aria-haspopup="true"
+						aria-expanded="false"> 접속하기<span class="caret"></span>
+					</a>
+						<ul class="dropdown-menu">
+							<li><a href="#">로그인</a></li>
+							<li><a href="#">회원가입</a></li>
+						</ul></li>
+				</div>
+
+			</div>
+		</nav>
+	</header>
+
+	<div class="container">
+		<div class="jumbotron">
+			<h1 class="text-center">부트스트랩 배우기</h1>
+			<p class="text-center">부트스트랩을 연습합니다.</p>
+			<p class="text-center">
+				<a class="btn btn-primary btn-lg" href="#" role="button">사이트로 이동</a>
+			</p>
+
+		</div>
+	</div>
+
+	<!-- 
+		footer: 일반적으로 홈페이지의 가장 아래 쪽에서 저작권, 개발자 등의 기타 정보를 보여준다.
+		
+	  row 클래스는 12개의 공간으로 나눈 다음 col-sm의 숫자 만큼의 크기를 표시 영역의 크기로 사용한다.
+         => 숫자의 합이 12를 넘어가면 안된다.
+      열(.col-*-*)의 구성 => https://poiemaweb.com/bootstrap-grid-system 참조
+      열은 행(.row) 내부에 배치해야 하고 .col-*-* 형태의 class로 열을 배치하는데 
+      첫 번째 "*"에는 xs, sm, md, lg 중 하나를 지정하고 두 번째 "*"에는 사용할 숫자를 쓴다.
+      ==================================================================================================================================
+                     Extra small devices      Small devices Tablets      Medium devices Desktops      Large devices Desktops
+                     Phones(0 ~ 767px)      (768 ~ 991px)            (992 ~ 1199px)            (1200px ~)
+      ==================================================================================================================================
+      Grid behavior      항상 수평 적용         viewport 너비가 breakpoint 이상이면 수평 적용, 미만이면 stack
+      Container width      None(auto)            750px                  970px                  1170px
+      Class prefix      .col-xs-            .col-sm-               .col-md-               .col-lg-
+      ==================================================================================================================================
+	 -->
+
+	<footer>
+		<div class="container" style="background-color: #e7e7e7; color: #777;">
+		
+			<div class="row">
+				<!-- 2 -->
+				<div class="col-xs-2" >
+					<h5>Copyright &copy;</h5>
+					<h5>김두부(Kim du bu)</h5>
+				</div>
+				<!-- 4 -->
+				<div class="col-xs-4">
+					<h5>대표자 소개</h5>
+					<h5>두부는 엄청 귀여운 강아지입니다.<br/>
+					2017년 12월 13일 태어난 말티즈입니다.</h5>
+				</div>
+				<!-- 2 -->
+				<div class="col-xs-2">
+					<h5>내비게이션</h5>
+					<div class="list-group">
+						<a href="#" class="list-group-item">소개</a>
+						<a href="#" class="list-group-item">강사진</a>
+						<a href="#" class="list-group-item">강의</a>
+					</div>
+				</div>
+				<!-- 2 -->
+				<div class="col-xs-2">
+					<h5>SNS</h5>
+					<div class="list-group">
+						<a href="#" class="list-group-item">YouTube</a>
+						<a href="#" class="list-group-item">Instagram</a>
+						<a href="#" class="list-group-item">Twitter</a>
+					</div>
+				</div>
+				<!-- 2 -->
+				<div class="col-xs-2">
+					<h5>
+					고객센터
+					</h5>
+					<span class="glyphicon glyphicon-ok"></span> &nbsp; 개인정보의 수집과 이용에 동의합니다.			
+				</div>
+			</div>	
+		
+		</div>
+	</footer>
+
+
+</body>
+</html>

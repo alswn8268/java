@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>부트스트랩 웹 페이지</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="./images/logo.png" />
+<link rel="stylesheet" href="./css/bootstrap.css">
+
+<style type="text/css">
+* {
+	font-family: pretendard;
+}
+
+.jumbotron {
+	background-image: url("./images/jumbotronBackground.jpg");
+	background-size: cover;
+	color: white;
+	text-shadow: 0.2em 0.2em 0.2em black;
+}
+</style>
+<script type="text/javascript" src="./js/jquery-3.6.1.js"></script>
+<script type="text/javascript" src="./js/bootstrap.js"></script>
+</head>
+<body>
+
+	<!-- 내비게이션 -->
+	<header>
+		<nav class="container navbar navbar-default">
+			<div class="container-fluid"></div>
+
+			<div class="navbar-header">
+
+				<button type="button" class="navbar-toggle collapsed"
+					data-toggle="collapse" data-target="#nav-toggle"
+					aria-expanded="false">
+					<span class="sr-only"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="./index5.html">메인</a>
+			</div>
+
+			<div class="collapse navbar-collapse" id="nav-toggle">
+
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="./index5.html">소개</a></li>
+					<li><a href="./instructor.html">강사진</a></li>
+					<li class="dropdown"><a href="#" class="dropdown-toggle"
+						data-toggle="dropdown" role="button" aria-haspopup="true"
+						aria-expanded="false"> 강의<span class="caret"></span>
+					</a>
+						<ul class="dropdown-menu">
+							<li><a href="./lecture.html?lectureName=C">C</a></li>
+							<li><a href="./lecture.html?lectureName=Java">Java</a></li>
+							<li><a href="./lecture.html?lectureName=Android">Android</a></li>
+						</ul></li>
+				</ul>
+
+				<form class="navbar-form navbar-left">
+					<div class="form-group">
+						<input type="text" class="form-control"
+							placeholder="검색할 내용을 입력하세요.">
+					</div>
+					<button type="button" class="btn btn-primary">검색</button>
+				</form>
+
+				<div class="nav navbar-nav navbar-right">
+					<li class="dropdown"><a href="#" class="dropdown-toggle"
+						data-toggle="dropdown" role="button" aria-haspopup="true"
+						aria-expanded="false"> 접속하기<span class="caret"></span>
+					</a>
+						<ul class="dropdown-menu">
+							<li><a href="./loginForm.html">로그인</a></li>
+							<li><a href="./registerForm.html">회원가입</a></li>
+						</ul></li>
+				</div>
+			</div>
+		</nav>
+	</header>
+	<!-- 내비게이션 끝 -->
+
+	<!-- 점보트론 -->
+	<div class="container">
+		<div class="jumbotron">
+			<h1 class="text-center">부트스트랩 배우기</h1>
+			<p class="text-center">부트스트랩을 연습합니다.</p>
+			<p class="text-center" style="text-shadow: none;">
+				<a class="btn btn-primary btn-lg" href="./lecture.html/?lectureName=Java" role="button">사이트로 이동</a>
+			</p>
+		</div>
+		<!-- 점보트론 끝 -->
+
+		<!-- 모달 -->
+		<div class="row">
+			<div class="col-xs-4">
+				<h4>이 사이트는...</h4>
+				<p>
+					대충 만든 사이트라서 별 의미가 없습니다.<br />내용을 신경쓰지 마세요.
+				</p>
+				<p>
+					<a href="#" class="btn btn-success">자세히 알아보기</a>
+				</p>
+			</div>
+			<div class="col-xs-4">
+				<h4>오늘의 점심메뉴는...</h4>
+				<p>아직도 정하지 못해서 큰일 났습니다. 뭘 먹어야 하지...?</p>
+				<p>
+					<a href="#" class="btn btn-info" data-target="#modal"
+						data-toggle="modal">자세히 알아보기</a>
+				</p>
+			</div>
+			<div class="col-xs-4">
+				<h4>이 부분은...</h4>
+				<p>더 이상 쓸 말이 없습니다. 그만 읽어</p>
+				<p>
+					<a href="#" class="btn btn-danger" data-target="#modal2"
+						data-toggle="modal">자세히 알아보기</a>
+				</p>
+			</div>
+		</div>
+		<!-- 모달 끝 -->
+
+		<!-- 모달 내용 -->
+		<div class="modal" id="modal">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						점심메뉴
+						<button class="close" data-dismiss="modal">&times;</button>
+					</div>
+					<div class="modal-body text-center">
+						저의 점심메뉴가 궁금하신가요? <br /> 사실 저도 그래요.<br />
+						<br /> <img alt="엑박" src="./images/java.png" style="width: 200px" />
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal" id="modal2">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						그만 읽으라고
+						<button class="close" data-dismiss="modal">&times;</button>
+					</div>
+					<div class="modal-body text-center">
+						끝까지 읽은 당신의 노고에 칭찬의 박수를 보냅니다.<br /> 말도 지지리도 안 들어요.<br />
+						<br /> <img alt="엑박" src="./images/youtube2.jpg"
+							style="width: 200px" />
+					</div>
+				</div>
+			</div>
+		</div>
+		<br />
+		<!-- 모달 내용 끝 -->
+
+		<!-- 
+		미디어: 미디어 객체 컴포넌트는 웹사이트에서 동영상, 사진 등을 글과 함께 보여주고자 할 때 사용하는 컴포넌트로, 미디어 객체를 이용해서 댓글과 같은 각종 SNS용 컨텐츠를 개발할 수 있다.
+	 -->
+
+		<!-- 메인 컨텐츠 -->
+		<div class="panel panel-primary">
+			
+			<!-- heading -->
+			<div class="panel-heading">
+				<h3 class="panel-title">
+					<span class="glyphicon-pencil"></span>&nbsp;&nbsp;&nbsp;최신 강의 목록
+				</h3>
+			</div>
+			
+			<!-- body -->
+			<div class="panel-body">
+			
+				<!-- 미디어 1 -->
+				<div class="media">
+					<div class="media-left">
+						<a href="./lecture.html?lectureName=C">
+							<img class="media-object" src="./images/c.png"/>
+						</a>
+					</div>
+					<div class="media-body">
+						<h4 class="media-heading">
+							<a href="./lecture.html?lectureName=C">C언어 기초 프로그래밍 강의</a>&nbsp;<span class="badge">NEW!</span>
+						</h4>
+							C언어 강의는 기초 프로그래밍 강의입니다.<br/> 처음 프로그래밍을 접하는 입문자가 듣기에 적합하지 않습니다.<br />
+							수강료는 499,900원이며 총 90강으로 구성됩니다.
+					</div>
+				</div>
+					<br />
+					<!-- 미디어2 -->
+					<div class="media">
+						<div class="media-left">
+							<a href="./lecture.html?lectureName=Java"> <img class="media-object" alt="엑박"
+								src="./images/java.png">
+							</a>
+						</div>
+						<div class="media-body">
+							<h4 class="media-heading">
+								<a href="./lecture.html?lectureName=Java">JAVA 기초 프로그래밍 강의</a>&nbsp;<span class="badge">NEW!</span>
+							</h4>
+							JAVA 강의는 객체 지향 프로그래밍 강의입니다.<br /> 처음 프로그래밍을 접하는 입문자가 듣기에 적합합니다.<br />
+							수강료는 무료이며 총 50강으로 구성됩니다.
+						</div>
+					</div>
+					<br />
+					<!-- 미디어3 -->
+					<div class="media">
+						<div class="media-left">
+							<a href="./lecture.html?lectureName=Android"> <img class="media-object" alt="엑박"
+								src="./images/android.png">
+							</a>
+						</div>
+						<div class="media-body">
+							<h4 class="media-heading">
+								<a href="./lecture.html?lectureName=Android">안드로이드 언어 프로그래밍 강의</a>&nbsp;<span class="badge">NEW!</span>
+							</h4>
+							Android 강의는 Java 또는 Kotlin을 활용하여 Android 어플리케이션을 개발하는 강의입니다.<br />
+							속도감있는 강의로 앱 개발 입문자가 빠르게 앱을 만들어 보면서 기본 개념을 탄탄히 다집니다.<br /> 수강료는
+							199,900원이며 총 30강으로 구성됩니다.
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<!-- 메인 컨텐츠 끝 -->
+
+
+	</div>
+
+	</div>
+	<br />
+	<!-- footer -->
+	<footer>
+		<div class="container" style="background-color: #e7e7e7; color: #777;">
+
+			<div class="row">
+				<div class="col-xs-2">
+					<h5>Copyright &copy;</h5>
+					<h5>김두부(Kim du bu)</h5>
+				</div>
+				<div class="col-xs-4">
+					<h5>대표자 소개</h5>
+					<h5>
+						두부는 엄청 귀여운 강아지입니다.<br /> 2017년 12월 13일 태어난 말티즈입니다.
+					</h5>
+				</div>
+				<div class="col-xs-2">
+					<h5>내비게이션</h5>
+					<div class="list-group">
+						<a href="./index5.html" class="list-group-item">소개</a> <a href="./instructor.html"
+							class="list-group-item">강사진</a> <a href="./lecture.html?lectureName=C"
+							class="list-group-item">강의</a>
+					</div>
+				</div>
+				<div class="col-xs-2">
+					<h5>SNS</h5>
+					<div class="list-group">
+						<a href="https://youtube.com" class="list-group-item">YouTube</a> <a href="https://www.instagram.com"
+							class="list-group-item">Instagram</a> <a href="https://twitter.com/?lang=ko"
+							class="list-group-item">Twitter</a>
+					</div>
+				</div>
+				<div class="col-xs-2">
+					<h5>
+						고객센터<br />
+					</h5>
+					<h5>
+						<textarea name="content" style="resize: none;" rows="5" cols="18">문의할 내용을 입력하세요.</textarea>
+						<br /> <span class="glyphicon glyphicon-ok"></span> &nbsp; 개인정보의
+						수집과 이용에 동의합니다.
+					</h5>
+				</div>
+			</div>
+
+		</div>
+	</footer>
+	<!-- footer 끝 -->
+
+</body>
+</html>

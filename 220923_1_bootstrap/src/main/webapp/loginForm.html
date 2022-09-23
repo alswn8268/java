@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>부트스트랩 웹 페이지</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="./images/logo.png" />
+<link rel="stylesheet" href="./css/bootstrap.css">
+
+<style type="text/css">
+	* {
+		font-family: pretendard;
+	}
+	
+	.jumbotron {
+		background-image: url("./images/jumbotronBackground.jpg");
+		background-size: cover;
+		color: white;
+		text-shadow: 0.2em 0.2em 0.2em black;
+	}
+	
+	/* 로그인 / 회원가입 style */
+/* 	body {
+	    padding-top: 90px;
+	} */
+	.panel-login {
+		border-color: #ccc;
+		-webkit-box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.2);
+		-moz-box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.2);
+		box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.2);
+	}
+	.panel-login>.panel-heading {
+		color: #00415d;
+		background-color: #fff;
+		border-color: #fff;
+		text-align:center;
+	}
+	.panel-login>.panel-heading a{
+		text-decoration: none;
+		color: #666;
+		font-weight: bold;
+		font-size: 15px;
+		-webkit-transition: all 0.1s linear;
+		-moz-transition: all 0.1s linear;
+		transition: all 0.1s linear;
+	}
+	.panel-login>.panel-heading a.active{
+		color: #337AB7;
+		font-size: 18px;
+	}
+	.panel-login>.panel-heading hr{
+		margin-top: 10px;
+		margin-bottom: 0px;
+		clear: both;
+		border: 0;
+		height: 1px;
+		background-image: -webkit-linear-gradient(left,rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.15),rgba(0, 0, 0, 0));
+		background-image: -moz-linear-gradient(left,rgba(0,0,0,0),rgba(0,0,0,0.15),rgba(0,0,0,0));
+		background-image: -ms-linear-gradient(left,rgba(0,0,0,0),rgba(0,0,0,0.15),rgba(0,0,0,0));
+		background-image: -o-linear-gradient(left,rgba(0,0,0,0),rgba(0,0,0,0.15),rgba(0,0,0,0));
+	}
+	.panel-login input[type="text"],.panel-login input[type="email"],.panel-login input[type="password"] {
+		height: 45px;
+		border: 1px solid #ddd;
+		font-size: 16px;
+		-webkit-transition: all 0.1s linear;
+		-moz-transition: all 0.1s linear;
+		transition: all 0.1s linear;
+	}
+	.panel-login input:hover,
+	.panel-login input:focus {
+		outline:none;
+		-webkit-box-shadow: none;
+		-moz-box-shadow: none;
+		box-shadow: none;
+		border-color: #ccc;
+	}
+	.btn-login {
+		background-color: #59B2E0;
+		outline: none;
+		color: #fff;
+		font-size: 14px;
+		height: auto;
+		font-weight: normal;
+		padding: 14px 0;
+		text-transform: uppercase;
+		border-color: #59B2E6;
+	}
+	.btn-login:hover,
+	.btn-login:focus {
+		color: #fff;
+		background-color: #53A3CD;
+		border-color: #53A3CD;
+	}
+	.forgot-password {
+		text-decoration: underline;
+		color: #888;
+	}
+	.forgot-password:hover,
+	.forgot-password:focus {
+		text-decoration: underline;
+		color: #666;
+	}
+	
+	.btn-register {
+		background-color: #337AB7;
+		outline: none;
+		color: #fff;
+		font-size: 14px;
+		height: auto;
+		font-weight: normal;
+		padding: 14px 0;
+		text-transform: uppercase;
+		border-color: #2e6da4;
+	}
+	.btn-register:hover,
+	.btn-register:focus {
+		color: #fff;
+		background-color: #2e6da4;
+		border-color: #2e6da4;
+	}
+
+</style>
+<script type="text/javascript" src="./js/jquery-3.6.1.js"></script>
+<script type="text/javascript" src="./js/bootstrap.js"></script>
+
+
+<!-- 로그인 / 회원가입 javascript -->
+<script type="text/javascript">
+	$(function() {
+	
+	    $('#login-form-link').click(function(e) {
+			$("#login-form").delay(100).fadeIn(100);
+	 		$("#register-form").fadeOut(100);
+			$('#register-form-link').removeClass('active');
+			$(this).addClass('active');
+			e.preventDefault();
+		});
+		$('#register-form-link').click(function(e) {
+			$("#register-form").delay(100).fadeIn(100);
+	 		$("#login-form").fadeOut(100);
+			$('#login-form-link').removeClass('active');
+			$(this).addClass('active');
+			e.preventDefault();
+		});
+	
+	});
+</script>
+
+
+</head>
+<body>
+
+	<header>
+		<nav class="container navbar navbar-default">
+			<div class="container-fluid"></div>
+
+			<div class="navbar-header">
+
+				<button type="button" class="navbar-toggle collapsed"
+					data-toggle="collapse" data-target="#nav-toggle"
+					aria-expanded="false">
+					<span class="sr-only"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="./index5.html">메인</a>
+			</div>
+
+			<div class="collapse navbar-collapse" id="nav-toggle">
+
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="./index5.html">소개</a></li>
+					<li><a href="./instructor.html">강사진</a></li>
+					<li class="dropdown"><a href="#" class="dropdown-toggle"
+						data-toggle="dropdown" role="button" aria-haspopup="true"
+						aria-expanded="false"> 강의<span class="caret"></span>
+					</a>
+						<ul class="dropdown-menu">
+							<li><a href="./lecture.html?lectureName=C">C</a></li>
+							<li><a href="./lecture.html?lectureName=Java">Java</a></li>
+							<li><a href="./lecture.html?lectureName=Andoird">Android</a></li>
+						</ul></li>
+				</ul>
+
+				<form class="navbar-form navbar-left">
+					<div class="form-group">
+						<input type="text" class="form-control"
+							placeholder="검색할 내용을 입력하세요.">
+					</div>
+					<button type="button" class="btn btn-primary">검색</button>
+				</form>
+
+				<div class="nav navbar-nav navbar-right">
+					<li class="dropdown"><a href="#" class="dropdown-toggle"
+						data-toggle="dropdown" role="button" aria-haspopup="true"
+						aria-expanded="false"> 접속하기<span class="caret"></span>
+					</a>
+						<ul class="dropdown-menu">
+							<li><a href="./loginForm.html">로그인</a></li>
+							<li><a href="./registerForm.html">회원가입</a></li>
+						</ul></li>
+				</div>
+			</div>
+		</nav>
+	</header>
+
+	<!-- bootstrap login form example 검색 후 적당한 폼의 html, css, js를 복사해서 작업한다. -->
+	<!-- https://bootsnipp.com/snippets/z1Bpy -->
+	<div class="container">
+    	<div class="row">
+			<div class="col-md-6 col-md-offset-3">
+				<div class="panel panel-login">
+					<div class="panel-heading">
+						<div class="row">
+							<div class="col-xs-6">
+								<a href="#" class="active" id="login-form-link">로그인</a>
+							</div>
+							<div class="col-xs-6">
+								<a href="#" id="register-form-link">회원가입</a>
+							</div>
+						</div>
+						<hr>
+					</div>
+					<div class="panel-body">
+						<div class="row">
+							<div class="col-lg-12">
+								<form id="login-form" action="https://phpoll.com/login/process" method="post" role="form" style="display: block;">
+									<div class="form-group">
+										<input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="아이디" value="">
+									</div>
+									<div class="form-group">
+										<input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="비밀번호">
+									</div>
+									<div class="form-group text-center">
+										<input type="checkbox" tabindex="3" class="" name="remember" id="remember">
+										<label for="remember"> 로그인 정보를 기억합니다.</label>
+									</div>
+									<div class="form-group">
+										<div class="row">
+											<div class="col-sm-6 col-sm-offset-3">
+												<input type="submit" name="login-submit" id="login-submit" tabindex="4" class="form-control btn btn-login" value="로그인">
+											</div>
+										</div>
+									</div>
+									<div class="form-group">
+										<div class="row">
+											<div class="col-lg-12">
+												<div class="text-center">
+													<a href="https://phpoll.com/recover" tabindex="5" class="forgot-password">비밀번호 찾기</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</form>
+								<form id="register-form" action="https://phpoll.com/register/process" method="post" role="form" style="display: none;">
+									<div class="form-group">
+										<input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="아이디" value="">
+									</div>
+									<div class="form-group">
+										<input type="email" name="email" id="email" tabindex="1" class="form-control" placeholder="이메일" value="">
+									</div>
+									<div class="form-group">
+										<input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="비밀번호">
+									</div>
+									<div class="form-group">
+										<input type="password" name="confirm-password" id="confirm-password" tabindex="2" class="form-control" placeholder="비밀번호 확인">
+									</div>
+									<div class="form-group">
+										<div class="row">
+											<div class="col-sm-6 col-sm-offset-3">
+												<input type="submit" name="register-submit" id="register-submit" tabindex="4" class="form-control btn btn-register" value="회원가입">
+											</div>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<footer>
+		<div class="container" style="background-color: #e7e7e7; color: #777;">
+
+			<div class="row">
+				<div class="col-xs-2">
+					<h5>Copyright &copy;</h5>
+					<h5>김두부(Kim du bu)</h5>
+				</div>
+				<div class="col-xs-4">
+					<h5>대표자 소개</h5>
+					<h5>
+						두부는 엄청 귀여운 강아지입니다.<br /> 2017년 12월 13일 태어난 말티즈입니다.
+					</h5>
+				</div>
+				<div class="col-xs-2">
+					<h5>내비게이션</h5>
+					<div class="list-group">
+						<a href="./index5.html" class="list-group-item">소개</a> <a href="./instructor.html"
+							class="list-group-item">강사진</a> <a href="./lecture.html?lectureName=C"
+							class="list-group-item">강의</a>
+					</div>
+				</div>
+				<div class="col-xs-2">
+					<h5>SNS</h5>
+					<div class="list-group">
+						<a href="https://youtube.com" class="list-group-item">YouTube</a> <a href="https://www.instagram.com"
+							class="list-group-item">Instagram</a> <a href="https://twitter.com/?lang=ko"
+							class="list-group-item">Twitter</a>
+					</div>
+				</div>
+				<div class="col-xs-2">
+					<h5>
+						고객센터<br />
+					</h5>
+					<h5>
+						<textarea name="content" style="resize: none;" rows="5" cols="18">문의할 내용을 입력하세요.</textarea>
+						<br /> <span class="glyphicon glyphicon-ok"></span> &nbsp; 개인정보의
+						수집과 이용에 동의합니다.
+					</h5>
+				</div>
+			</div>
+
+		</div>
+	</footer>
+
+</body>
+</html>
