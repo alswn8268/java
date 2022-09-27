@@ -67,19 +67,67 @@ console.log(numbers);
 // getter를 실행할 때는 함수 이름 뒤에 ()를 붙이면 안 된다.
 numbers.sum;
 console.log(numbers.sum);
+numbers.b = 8;
+console.log(numbers.sum);
+console.log('----------------------');
 
+const bull = {
+	_name: '황소',
+	
+	// getter => get으로 선언한다.
+	get name() {
+		console.log('_name을 조회합니다.');
+		return this._name;
+	},
+	
+	// setter => set으로 선언한다.
+	set name(value) {
+		console.log('_name을 변경합니다.');
+		this._name = value;
+	}
+	
+};
+console.log(bull);
+console.log(bull._name);
+bull._name = '들소';
+console.log(bull._name);
 
+// getter를 실행할 때는 함수 이름 뒤에 ()를 붙이면 안 된다.
+bull.name;
+// setter를 실행할 때는 함수 이름 뒤에 ()를 붙이면 안 된다.
+// bull.name('물소'); (X)
+bull.name = '물소';
+console.log(bull._name);
+console.log('----------------------');
 
+const numbers2 = {
+	_a: 1,
+	_b: 2,
+	sum: 3,
+	calculator: function () {
+		console.log('calculator');
+		this.sum = this._a + this._b;
+	},
+	get a() {
+		return this._a;
+	},
+	get b() {
+		return this._b;
+	},
+	set a(value) {
+		this._a = value;
+		this.calculator();
+	},
+	set b(value) {
+		this._b = value;
+		this.calculator();		
+	}
 
+};
 
-
-
-
-
-
-
-
-
-
-
-
+console.log(numbers2);
+console.log(numbers2.sum);
+numbers2.a = 5;
+console.log(numbers2.sum);
+numbers2.b = 7;
+console.log(numbers2.sum);
