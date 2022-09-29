@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>javascript 윈도우</title>
+
+<script type="text/javascript" src="./js/javascript19.js"></script>
+<link rel="stylesheet" href="./css/javascript19.css">
+
+<style type="text/css">	
+	* {
+		font-family: 나눔고딕;
+	}
+
+</style>
+
+</head>
+<body>
+
+	<div>
+		<h1>팝업창 만들기 - 새창</h1>
+		ID 입력 : <input id="parentID" type="text"/>
+		<input type="button" name="btn" value="아이디 중복 검사" onclick="openWin()"/><br/>
+		ID 확인 : <input id="requestID" type="text" readonly/><br/>
+		ID 확인 : <input type="text" name="requestID" readonly/><br/>
+		ID 확인 : <input type="text" readonly/><br/>
+		<h1></h1>
+
+		<h1>팝업창 만들기 - 현재 창</h1>
+		<input type="button" name="btn" value="로그인" onclick="registerForm()"/><br/>
+	</div><br/>
+
+	<!-- 로그인 폼 -->
+	<div id="register">
+		<form action="?">
+			<table>
+				<tr>
+					<th>아이디</th>
+					<td>
+						<input type="text" name="id" readonly onclick="idChk()" />
+						<input type="button" value="중복체크" onclick="idCheck()" />
+					</td>
+				</tr>
+				<tr>
+					<th>비밀번호</th>
+					<td>
+						<input type="password" name="password" />
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2" align="center">
+						<input type="button" value="확인" onclick="closeWin()"/>
+					</td>
+				</tr>
+			</table>
+		</form>
+	</div>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

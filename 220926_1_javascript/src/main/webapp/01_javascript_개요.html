@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>javascript 개요</title>
+
+<script type="text/javascript" src="./js/javascript01.js"></script>
+
+<!-- 
+	자바스크립트를 웹 문서에 포함시키는 방법
+	
+	1. <head>에 삽입하는 경우
+	<head>
+		<script type="text/javascript" src="경로명"></script>
+	</head>
+	parsing html => fetching js => executing js => parsing html	
+	
+	무거운 스크립트일수록 브라우저 랜더링이 더 지연되어 사용자에게 완성되지 않은 화면을 오래 노출할 수 있다.
+	DOM(Document Object Model, html 문서 구조) 구조가 필요한 스크립트일 경우 아직 랜더링되지 않은 DOM 요소가 있으면 오류가 발생될 수 있다.
+	https://developer.mozilla.org/ko/docs/Web/API/Document_Object_model/Introduction
+	
+	2. <body>에 삽입하는 경우
+	<body>
+		...
+		<script type="text/javascript" src="경로명"></script>
+	</body>
+	
+	parsing html => fetching js => executing js 
+ 	
+ 	브라우저가 랜더링이 완료된 상태에서 스크립트가 실행되어서 일반적으로 추천된다.
+ 	스크립트에서 DOM 요소에 접근해도 오류가 발생되지 않는다.
+ 	
+ 	3. async 
+	<head>
+		<script async type="text/javascript" src="경로명1"></script>
+		<script async type="text/javascript" src="경로명2"></script>
+		<script async type="text/javascript" src="경로명3"></script>
+	</head>
+	
+	parsing html =>    대기    => parsing html
+	fetching js => executing js 
+	
+	async 속성을 사용하면 브라우저가 html을 파싱하는 중에 병렬로 js 파일을 다운받으면서 파싱을 진행하다가, js 파일의 다운이 완료되면 html 파싱을 중지하고 js를 먼저 실행한 후에 html 파싱을 진행한다.
+	js 파일을 다운받는 시간을 절약할 수 있지만 js에서 DOM 요소에 접근 시 아직 html 파싱이 완료된 상태가 아니므로 오류가 발생될 수 있고 브라우저 랜더링이 지연될 수 있다.
+	여러 개의 js 파일을 다운받아야 할 경우, 먼저 다운된 js 파일을 우선적으로 실행하기 때문에 js 파일의 순서가 중요할 경우 추천되지 않는다.	
+	
+	4. defer
+	<head>
+		<script defer type="text/javascript" src="경로명1"></script>
+		<script defer type="text/javascript" src="경로명2"></script>
+		<script defer type="text/javascript" src="경로명3"></script>
+	</head>
+	
+	parsing html => parsing html
+	fetching js =>     대기      => executing js 
+
+	defer 속성을 사용하면 브라우저가 html을 파싱하는 중에 병렬로 js 파일을 다운받으면서 html 파싱을 진행하고, html 파싱이 끝난 뒤 js 파일을 진행한다.
+	js 파일을 다운받는 시간을 절약할 수 있고 정의한 js 순서대로 js 파일이 실행된다.
+ -->
+
+</head>
+<body>
+
+
+	
+</body>
+</html>
+

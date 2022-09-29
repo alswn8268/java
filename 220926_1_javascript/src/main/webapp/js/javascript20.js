@@ -24,7 +24,10 @@ function sendID2() {
 	opener.document.getElementsByName('requestID')[0].value = childID;
 	// getElementsByTagName(): 인수로 지정된 태그들을 얻어온다.
 	opener.document.getElementsByTagName('input')[4].value = childID;
+	opener.document.getElementsByTagName('h1')[1].innerHTML = '<marquee style="color:red">'+ childID + '</marquee>';
 
 	// 자식 창의 데이터를 부모 창으로 전송한 후 자식 창을 닫는다.
 	self.close(); // 현재 창을 닫는다.
 }
+
+
