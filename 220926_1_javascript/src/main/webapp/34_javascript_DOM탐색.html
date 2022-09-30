@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>DOM 탐색</title>
+<script type="text/javascript" src="./js/javascript34.js"></script>
+<style type="text/css">	
+	* {
+		font-family: 나눔고딕;
+	}
+	.button {
+		background-color:  cornflowerblue; 
+		border: none;
+		color: white;
+		padding: 4px 4px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 14px;
+		margin: 4px 2px;
+		transition-duration: 0.4s;
+		cursor: pointer;
+		border-radius: 10px;
+	}	
+
+	.button1 {
+		background-color: white; 
+		color: black; 
+		border: 2px solid  cornflowerblue;
+		}
+
+	.button1:hover {
+		background-color: cornflowerblue;
+		color: white;
+	}
+</style>
+</head>
+
+<body>
+
+	<div>
+		나는 div
+		<p>
+			<span>child1</span>
+		</p>
+		나도 div
+		<p>
+			<span>child2</span>
+		</p>
+		<p>
+			<span>child3</span>
+		</p>
+	</div>
+	<input class="button button1" type="button" value="부모탐색" onclick="searchParent()"/>
+	<input class="button button1" type="button" value="자식탐색" onclick="searchChild()"/>
+
+	<h2>test1을 포함하고 있는 div 태그를 찾아 배경색 변경하기 - parentNode</h2>
+	<h2>마지막 div 태그에 포함된 test4의 폰트 크기를 20px로 변경하기 - childNodes</h2>
+
+	<div onclick="testSearch()">적용</div>
+	<div>
+		<p>test1</p>
+		<p>test2</p>
+	</div>
+	<div>
+		<p>test3</p>
+		<p>test4</p>
+	</div>
+
+</body>
+</html>

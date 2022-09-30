@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Checkbox</title>
+<script type="text/javascript" src="./js/javascript32.js"></script>
+<link rel="stylesheet" href="./css/javascript32.css"/>
+<style type="text/css">	
+	* {
+		font-family: 나눔고딕;
+	}
+	.button {
+		background-color:  slateblue; 
+		border: none;
+		color: white;
+		padding: 4px 4px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 14px;
+		margin: 4px 2px;
+		transition-duration: 0.4s;
+		cursor: pointer;
+		border-radius: 10px;
+	}	
+
+	.button1 {
+		background-color: white; 
+		color: black; 
+		border: 2px solid  slateblue;
+		}
+
+	.button1:hover {
+		background-color: slateblue;
+		color: white;
+	}
+</style>
+</head>
+
+<body>
+
+	<div class="colorbox">
+		<div id="red">빨강</div>
+		<div id="blue">파랑</div>
+		<div id="yellow">노랑</div>
+		<div id="black">검정</div>
+	</div><br/>
+
+	<form action="?">
+		<input type="checkbox" name="all" onclick="allCheck()"/>전체선택<br/>
+		<input type="checkbox" name="chk" value="red" onclick="chkSelect()"/>빨강<br/>
+		<input type="checkbox" name="chk" value="blue" onclick="chkSelect()"/>파랑<br/>
+		<input type="checkbox" name="chk" value="yellow" onclick="chkSelect()"/>노랑<br/>
+		<input type="checkbox" name="chk" value="black" onclick="chkSelect()"/>검정<br/>
+
+		<input class="button button1" type="button" value="선택" onclick="selectColor()"/>
+		<input class="button button1" type="button" value="클리어" onclick="clearColor()"/>
+	</form>
+
+</body>
+</html>

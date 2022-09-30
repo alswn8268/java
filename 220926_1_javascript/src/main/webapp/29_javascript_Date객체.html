@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>javascript Date 객체</title>
+<script type="text/javascript" src="./js/javascript29.js"></script>
+<style type="text/css">	
+	* {
+		font-family: 나눔고딕;
+	}
+	.button {
+		background-color: cornflowerblue; 
+		border: none;
+		color: white;
+		padding: 4px 4px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 14px;
+		margin: 4px 2px;
+		transition-duration: 0.4s;
+		cursor: pointer;
+		border-radius: 10px;
+	}	
+
+	.button1 {
+		background-color: white; 
+		color: black; 
+		border: 2px solid cornflowerblue;
+		}
+
+	.button1:hover {
+		background-color: cornflowerblue;
+		color: white;
+	}
+</style>
+</head>
+
+<body>
+
+	<h1>Date 객체</h1>
+	
+	<h2>오늘 날짜 얻어오기</h2>
+	<span id="today"></span><br/><br/>
+	<!-- <input class="button button1" type="button" value="오늘 날짜" onclick="testDate1()">
+	<input class="button button1" type="button" value="날짜 관련 함수" onclick="testDate2()"> -->
+	<button type="button" class="button button1">오늘 날짜</button>
+	<button type="button" class="button button1">날짜 관련 함수</button><br/><br/>
+
+	<h2>날짜 만들기</h2>
+	<span id="specific"></span><br/><br/>
+	<input type="text" id="inputDate" size="50"/>
+	<button type="button" class="button button1">날짜 만들기</button>
+
+	<h2>경과일</h2>
+	지정일: &nbsp;<input type="date" value="2022-09-30" id="date1"/><br/>
+	경과일: &nbsp;<input type="number" id="dateInput"/><br/>
+	지정일에서 경과일까지 지난 일 수는 <input type="text" id="result" readonly>일 입니다. <br/>
+	<button type="button" class="button button1">경과일 보기</button>
+
+	<h2>D-Day 계산기</h2>
+	수료일: &nbsp;<input type="date" value="2023-03-27" id="date2"/><br/> &nbsp;&nbsp;
+	지정일: &nbsp;<input type="date" value="2022-08-16" id="inputDate2"/><br/>
+	수료일까지 남은 일 수는 <input type="text" id="result2" readonly>일 입니다. <br/>
+	<button type="button" class="button button1">디데이 보기</button>
+
+</body>
+</html>
+

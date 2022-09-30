@@ -1,0 +1,31 @@
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+.colorbox {
+    width: 300px;
+    height: 300px;
+    border: 1px solid seagreen;
+    position: relative;
+}
+
+#red, #blue, #yellow, #black {
+    width: 150px;
+    height: 150px;
+    border: 1px solid gray;
+    position: absolute;
+}
+
+#blue {
+    left: 150px;
+}
+
+#yellow {
+    top: 150px;
+}
+
+#black {
+    top: 150px;
+    left: 150px;
+}

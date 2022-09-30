@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Select</title>
+<script type="text/javascript" src="./js/javascript33.js"></script>
+<style type="text/css">	
+	* {
+		font-family: 나눔고딕;
+	}
+	.button {
+		background-color:  cornflowerblue; 
+		border: none;
+		color: white;
+		padding: 4px 4px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 14px;
+		margin: 4px 2px;
+		transition-duration: 0.4s;
+		cursor: pointer;
+		border-radius: 10px;
+	}	
+
+	.button1 {
+		background-color: white; 
+		color: black; 
+		border: 2px solid  cornflowerblue;
+		}
+
+	.button1:hover {
+		background-color: cornflowerblue;
+		color: white;
+	}
+</style>
+</head>
+
+<body>
+	<p>
+		<!-- onchange: 콤보 상자에서 어떤 option 요소가 선택(변경)되면 실행되는 이벤트 -->
+		<select name="food" onchange="foodShow()">
+			<option>짜장면</option>
+			<option>짬뽕</option>
+			<option>탕수육</option>
+			<option>양장피</option>
+			<option>팔보채</option>
+		</select>
+	</p>
+
+	<p>
+		<!-- multiple 속성을 지정하면 리스트 박스가 표시된다. -->
+		<!-- size 옵션을 지정하면 리스트 박스에 표시되는 목록의 개수를 지정할 수 있다. 디폴트: 4 -->
+		<select name="food" size="5" multiple/>
+			<option>짜장면</option>
+			<option>짬뽕</option>
+			<option>탕수육</option>
+			<option>양장피</option>
+			<option>팔보채</option>
+		</select>
+		<input type="button" value="선택" onclick="foodShow2()">
+	</p>
+
+</body>
+</html>

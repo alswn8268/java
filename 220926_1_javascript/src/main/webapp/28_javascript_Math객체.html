@@ -42,11 +42,20 @@
 
 	<h2>랜덤 숫자 생성하기</h2>
 	숫자: <input id="random" type="text" />
-	<input type="button" value="랜덤 숫자 만들기" onclick="randomNumber(random.value)">
+	<input type="button" class="button button1" value="숫자 만들기" onclick="randomNumber(random.value)">
 
 	<h2>랜덤 배경색 생성하기 </h2>
-	숫자: <input id="random" type="text" />
-	<input type="button" value="랜덤 배경색 만들기" onclick="randomColor(random.value)">
+	<input type="button" class="button button1" value="배경색 만들기" onclick="randomColor()">
+
+	<h2>랜덤한 크기의 원 만들기 </h2>
+	<input type="button" class="button button1" value="원 만들기" onclick="randomCircle()">
+	<div id="circle"></div>
+
+	<h2>위 원의 너비와 둘레 계산하기</h2>
+	<input type="button" class="button button1" value="너비와 둘레 계산" onclick="rCal()"><br/>
+	원의 둘레: <div id="area"></div>
+	원의 너비: <div id="len"></div>
+
 </body>
 </html>
 
