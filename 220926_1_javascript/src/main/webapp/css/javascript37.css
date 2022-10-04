@@ -1,0 +1,22 @@
+a {
+    font-size: 80pt;
+    text-decoration: none;
+    color: gray;
+    position: relative;
+    top: 50px;
+}
+
+a:hover {
+    color: powderblue;
+}
+
+a:visited {
+    color: thistle;
+}
+
+img {
+    border: 2px solid skyblue;
+    width: 300px;
+    height: 300px;
+    vertical-align: middle;
+}
