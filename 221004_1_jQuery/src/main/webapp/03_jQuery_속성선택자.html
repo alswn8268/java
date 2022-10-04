@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jQuery - 속성선택자</title>
+
+<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+<script type="text/javascript" src="./js/jQuery03.js"></script>
+
+<style type="text/css">	
+	* {
+		font-family: 나눔고딕;
+	}
+	.button {
+		background-color: cornflowerblue; 
+		border: none;
+		color: white;
+		padding: 4px 4px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		margin: 4px 2px;
+		transition-duration: 0.4s;
+		cursor: pointer;
+		border-radius: 10px;
+	}	
+
+	.button1 {
+		background-color: white; 
+		color: black; 
+		border: 2px solid cornflowerblue;
+		}
+
+	.button1:hover {
+		background-color: cornflowerblue;
+		color: white;
+	}
+</style>
+
+</head>
+<body>
+
+	<h2>속성 선택자</h2>
+
+	이미지 크기를 모두 200px * 200px로 설정하기
+	<button class="button button1" onclick="imgSize()">이미지 크기 변경</button><br/>
+	이미지 중에서 id 속성이 selId인 이미지 숨기기
+	<button class="button button1" onclick="idSelector()">이미지 숨기기</button><br/>
+	이미지 중에서 class 속성이 selClass인 이미지 투명도 변경하기
+	<button class="button button1" onclick="classSelector()">이미지 투명도 변경</button><br/>
+
+	<table>
+		<tr>
+			<td>
+				<img id="selId" title="img01+" src="./images/img01.jpg"/>
+			</td>
+			<td>
+				<img title="img02" src="./images/img02.jpg"/>
+			</td>
+			<td>
+				<img class="selClass" title="img23+" src="./images/img03.jpg"/>
+			</td>
+			<td>
+				<img class="selClass" title="img04" src="./images/img04.jpg"/>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<img id="selId" title="img01-img01" src="./images/img01.jpg"/>
+			</td>
+			<td>
+				<span><img title="image02 img02" src="./images/img02.jpg"/></span>
+			</td>
+			<td>
+				<img class="selClass" title="img023" src="./images/img03.jpg"/>
+			</td>
+			<td>
+				<img class="selClass" title="img04-image04" src="./images/img04.jpg"/>
+			</td>
+		</tr>
+	</table>
+
+</body>
+</html>
