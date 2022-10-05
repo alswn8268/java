@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jQuery - form</title>
+
+<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+<script type="text/javascript" src="./js/jQuery06.js"></script>
+
+<style type="text/css">	
+	* {
+		font-family: 나눔고딕;
+	}
+	.button {
+		background-color: cornflowerblue; 
+		border: none;
+		color: white;
+		padding: 4px 4px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		margin: 4px 2px;
+		transition-duration: 0.4s;
+		cursor: pointer;
+		border-radius: 10px;
+	}	
+
+	.button1 {
+		background-color: white; 
+		color: black; 
+		border: 2px solid cornflowerblue;
+		}
+
+	.button1:hover {
+		background-color: cornflowerblue;
+		color: white;
+	}
+</style>
+
+</head>
+<body>
+
+<form id="single" action="?" method="post">
+	<div>
+		<span>사용자</span>
+		<input id="infoBox" type="text" name="userID"/>
+		<span class="error" style="color: rgb(212, 0, 0); font-weight: bold;">반드시 입력해야 합니다.</span>
+	</div><br/>
+	<input class="button button1" type="submit" value="입력하기"/>
+</form>
+
+<fieldset>
+	<legend>체크 여부 확인</legend>
+	<label><input type="checkbox" name="all" style="padding: 10px;"/>전체 선택<br/></label>
+	<label><input type="checkbox" name="chk" value="1000" />사과<br/></label>
+	<label><input type="checkbox" name="chk" value="2000" />바나나<br/></label>
+	<label><input type="checkbox" name="chk" value="3000" />오렌지<br/></label><br/>
+	<input type="button" id="confirm" value="확인"/><br/>
+	<span>선택한 과일 가격: </span>
+	<div id="result">
+		가격 정보
+	</div>
+</fieldset>
+
+</body>
+</html>

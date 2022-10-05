@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jQuery - form</title>
+
+<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+<script type="text/javascript" src="./js/jQuery05.js"></script>
+
+<style type="text/css">	
+	* {
+		font-family: 나눔고딕;
+	}
+	.button {
+		background-color: cornflowerblue; 
+		border: none;
+		color: white;
+		padding: 4px 4px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		margin: 4px 2px;
+		transition-duration: 0.4s;
+		cursor: pointer;
+		border-radius: 10px;
+	}	
+
+	.button1 {
+		background-color: white; 
+		color: black; 
+		border: 2px solid cornflowerblue;
+		}
+
+	.button1:hover {
+		background-color: cornflowerblue;
+		color: white;
+	}
+</style>
+
+</head>
+<body>
+
+	<h2>회원가입</h2>
+	<table>
+		<tr>
+			<th>아이디</th>
+			<td>
+				<input type="text"/>
+				<input type="button" value="중복체크"/>
+			</td>
+		</tr>
+		<tr>
+			<th>비밀번호</th>
+			<td>
+				<input type="password"/>
+			</td>
+		</tr>
+		<tr>
+			<th>이름</th>
+			<td>
+				<input type="text"/>
+			</td>
+		</tr>
+		<tr>
+			<th>이메일</th>
+			<td>
+				<input type="text"/>@<input type="text" name="addr">
+				<select name="email">
+					<option>====== 직접 입력 ======</option>
+					<option>naver.com</option>
+					<option>gmail.com</option>
+					<option>daum.net</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<th>취미</th>
+			<td>
+				<input type="checkbox" name="hobbies" value="게임"/>게임
+				<input type="checkbox" name="hobbies" value="차 마시기"/>차 마시기
+				<input type="checkbox" name="hobbies" value="독서"/>독서
+			</td>
+		</tr>
+	</table>
+
+
+</body>
+</html>
