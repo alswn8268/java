@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jQuery - 메뉴</title>
+
+<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+<script type="text/javascript" src="./js/jQuery07.js"></script>
+<link rel="stylesheet" href="./css/jQuery07.css">
+
+<style type="text/css">	
+	* {
+		font-family: 나눔고딕;
+	}
+	.button {
+		background-color: cornflowerblue; 
+		border: none;
+		color: white;
+		padding: 4px 4px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		margin: 4px 2px;
+		transition-duration: 0.4s;
+		cursor: pointer;
+		border-radius: 10px;
+	}	
+
+	.button1 {
+		background-color: white; 
+		color: black; 
+		border: 2px solid cornflowerblue;
+		}
+
+	.button1:hover {
+		background-color: cornflowerblue;
+		color: white;
+	}
+</style>
+
+</head>
+<body>
+
+	<h2>DOM 탐색 메소드</h2>
+	<div id="menu1" class="menu">
+		<!-- 
+			target 속성으로 하이퍼링크 페이지가 열리는 방법을 지정할 수 있다.
+			_self: 기본값, 현재창에 하이퍼링크 문서를 열리게 한다.
+			_blank: 새 탭에 하이퍼 링크 문서를 열리게 한다.
+		-->
+		<a href="./08_jQuery_DOM탐색1.html">필터링 메소드</a>
+		<div>first()</div>
+		<div>eq()</div>
+		<div>slice()</div>
+		<div>last()</div>
+		<div>&nbsp;</div>
+	</div>
+
+	<div id="menu2" class="menu">
+		<a href="./09_jQuery_DOM탐색2.html">필터링 메소드</a>
+		<div>find()</div>
+		<div>children()</div>
+		<div>parent()</div>
+		<div>parents()</div>
+		<div>next()</div>
+		<div>prev()</div>
+		<div>&nbsp;</div>
+	</div>
+
+	<div id="menu3" class="menu">
+		<a href="./10_jQuery_DOM탐색3.html">기타 필터링 메소드</a>
+		<div>add()</div>
+		<div>is()</div>
+		<div>&nbsp;</div>
+	</div>
+
+</body>
+</html>

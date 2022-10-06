@@ -1,0 +1,13 @@
+img {
+    width: 200px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.addSize {
+    width: 300px;
+}
+
+.onOffImage {
+    display: none;
+}

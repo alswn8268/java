@@ -1,0 +1,28 @@
+body {
+    margin: 10px auto;
+    width: 500px;
+}
+
+h2 {
+    margin: 5px;
+    padding: 0px 3px;
+}
+
+p {
+    margin: 5px;
+    padding: 0px 0.5px;
+}
+
+.pane {
+    background-color: lavenderblush;
+    padding: 10px 20px;
+    position: relative;
+    border-top: 5px solid lightpink;
+}
+
+.delete {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}

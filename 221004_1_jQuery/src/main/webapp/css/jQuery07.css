@@ -1,0 +1,22 @@
+a {
+    text-decoration: none;
+    color:black;
+}
+
+.menu {
+    background-color: mistyrose;
+    width: 150px;
+    border: 1px solid lightcoral;
+    border-radius: 5px;
+    padding: 5px;
+    transition: 0.5s;
+}
+
+.menu:hover {
+    background-color: lightsalmon;
+}
+
+div:hover, a:hover {
+    background-color: lavenderblush;
+    text-decoration: none;
+}

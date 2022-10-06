@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jQuery - DOM 탐색 2</title>
+
+<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+<script type="text/javascript" src="./js/jQuery09.js"></script>
+<link rel="stylesheet" href="./css/jQuery07.css">
+
+<style type="text/css">	
+	* {
+		font-family: 나눔고딕;
+	}
+	.button {
+		background-color: palevioletred; 
+		border: none;
+		color: white;
+		padding: 4px 4px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		margin: 4px 2px;
+		transition-duration: 0.4s;
+		cursor: pointer;
+		border-radius: 10px;
+	}	
+
+	.button1 {
+		background-color: white; 
+		color: black; 
+		border: 2px solid palevioletred;
+		}
+
+	.button1:hover {
+		background-color: palevioletred;
+		color: white;
+	}
+</style>
+
+</head>
+<body>
+
+	<h2>DOM 탐색 메소드</h2>
+
+	<div>
+		find('선택자'): 선택된 요소 중에서 탐색하고자 하는 선택자로 지정한 요소를 찾는다. <br/>
+		children('선택자'): 선택된 요소의 자식 요소 중에서 선택자로 지정한 자식 요소를 찾는다. <br/>
+		parent(): 선택된 요소의 부모 요소를 찾는다. <br/>
+		parents('선택자'): 선택된 요소의 부모 요소 중에서 선택자로 지정한 조상 요소를 찾는다. <br/>
+		next(): 선택된 요소의 바로 다음 형제 요소를 찾는다. <br/>
+		prev(): 선택된 요소의 바로 이전 형제 요소를 찾는다. <br/>
+	</div>
+
+	<div>
+		<p>
+			<b>홍길동</b>
+		</p>
+		<p id="chd">홍길동</p>
+		<p>
+			장길산
+			<span>도적넘</span>
+		</p>
+		<p>일지매</p>
+		<p>
+			<b>성춘향</b>
+		</p>
+	</div>
+
+	<a class="button button1" href="./07_jQuery_menu.html">돌아가기</a><br/>
+
+</body>
+</html>

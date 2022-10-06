@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jQuery - cycle 플러그인</title>
+
+<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+<!-- cycle 플러그인 cdn (* easing 플러그인도 추가해야 한다.)-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.cycle/3.0.3/jquery.cycle.all.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+<script type="text/javascript" src="./js/jQuery16.js"></script>
+
+<style type="text/css">	
+	* {
+		font-family: pretendard;
+	}
+	.button {
+		background-color: palevioletred; 
+		border: none;
+		color: white;
+		padding: 5px 10px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		margin: 4px 2px;
+		transition-duration: 0.4s;
+		cursor: pointer;
+		border-radius: 10px;
+	}	
+
+	.button1 {
+		background-color: white; 
+		color: black; 
+		border: 2px solid palevioletred;
+		}
+
+	.button1:hover {
+		background-color: palevioletred;
+		color: white;
+	}
+</style>
+
+</head>
+<body>
+
+	<!-- 
+		이미지를 자동으로 넘겨주는 cycle 플러그인
+		cycle 플러그인 효과를 미리 볼 수 있는 API 사이트: https://malsup.com/jquery/cycle/
+	 -->
+	
+	<div id="right">
+		<img src="./images/img01.jpg">
+		<img src="./images/img02.jpg">
+		<img src="./images/img03.jpg">
+		<img src="./images/img04.jpg">
+		<img src="./images/img05.jpg">
+	</div>
+	<div id="shuffle">
+		<img src="./images/img01.jpg">
+		<img src="./images/img02.jpg">
+		<img src="./images/img03.jpg">
+		<img src="./images/img04.jpg">
+		<img src="./images/img05.jpg">
+	</div>
+
+</body>
+</html>
