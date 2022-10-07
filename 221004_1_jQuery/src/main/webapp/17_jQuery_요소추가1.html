@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jQuery - 요소 추가</title>
+
+<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+<!-- cycle 플러그인 cdn (* easing 플러그인도 추가해야 한다.)-->
+<script type="text/javascript" src="./js/jQuery17.js"></script>
+
+<style type="text/css">	
+	* {
+		font-family: pretendard;
+	}
+
+	div {
+		border: 1px solid peachpuff;
+	}
+
+	.prepend {
+		border: 1px solid powderblue;
+	}
+
+	.append {
+		border: 1px solid yellowgreen;
+	}
+
+	.button {
+		background-color: palevioletred; 
+		border: none;
+		color: white;
+		padding: 5px 10px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		margin: 4px 2px;
+		transition-duration: 0.4s;
+		cursor: pointer;
+		border-radius: 10px;
+	}	
+
+	.button1 {
+		background-color: white; 
+		color: black; 
+		border: 2px solid palevioletred;
+		}
+
+	.button1:hover {
+		background-color: palevioletred;
+		color: white;
+	}
+</style>
+
+</head>
+<body>
+
+	<button class="button button1" type="button">prepend</button>
+	<button class="button button1" type="button">append</button>
+	<button class="button button1" type="button">html</button>
+	<button class="button button1" type="button">text</button>
+
+	<div>
+		<p>1</p>
+		<p>2</p>
+		<p>3</p>
+		<p>내부 삽입</p>
+	</div>
+</body>
+</html>

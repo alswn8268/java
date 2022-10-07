@@ -1,0 +1,58 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    width: 1000px;
+    margin: 50px auto;
+}
+
+fieldset {
+    width: 260px;
+    height: 50px;
+    padding: 10px;
+    margin: 20px 0px;
+}
+
+input {
+    padding: 5px 10px;
+}
+
+table {
+    width: 450px;
+    border: 2px solid palevioletred;
+    padding: 5px;
+}
+
+td {
+    padding: 5px 10px;
+}
+
+table tr:nth-child(odd) {
+    background-color: lavenderblush;
+}
+
+th {
+    padding: 5px;
+}
+
+#emp_search:hover {
+    background-color: palevioletred; 
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border: 1px solid palevioletred;
+}
+
+#emp_search {
+    border-radius: 7px;
+    background-color: white; 
+    color: black; 
+    border: 1px solid palevioletred;
+    text-align: center;
+
+    }
