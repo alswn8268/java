@@ -66,7 +66,7 @@
 	DBUtil.close(conn);
 	
 	// 테이블에 저장된 데이터를 브라우저에 출력하기 위해서 memoList.jsp로 넘겨준다.
-	response.sendRedirect("memoList3.jsp");
+	response.sendRedirect("memoList4.jsp");
 	%>
 	
 </body>
