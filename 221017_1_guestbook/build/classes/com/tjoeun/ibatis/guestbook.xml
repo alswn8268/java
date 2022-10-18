@@ -7,10 +7,28 @@
 	<!-- resultClass: SQL 명령문이 실행되고 DAO 클래스로 리턴되는 데이터의 타입을 적는다. -->
 	
 	<!-- 글 1건을 저장한다. -->
-	<insert id="insert" parameterClass="com.tjoeun.vo.GuestbookVO">
+	<insert id="insert" parameterClass="vo">
 		insert into guestbook (idx, name, password, memo, ip) values (guestbook_idx_seq.nextval, #name#, #password#, #memo#, #ip#)	
 	</insert>
 	
+	<!-- 전체 글의 개수를 얻어온다. -->
+	<select id="selectCount" resultClass="int">
+		SELECT COUNT(*) FROM guestbook
+	</select>
+	
+	<!-- 1페이지 분량의 글 목록을 얻어온다. -->
+	<select id="selectList" parameterClass="java.util.HashMap" resultClass="vo">
+		<!-- mysql -->
+		<!-- select * from guestbook order by idx desc limit #startNo#, #pageSize# -->
+		<!-- <![CDATA[ ~ ]]> 사이에 입력한 내용은 문자열로 취급한다. -->
+		<![CDATA[
+			select * from (
+				select rownum rnum, TT.* from (
+					select * from guestbook order by idx desc 
+				) TT where rownum <= #endNo#
+			) where rnum >= #startNo# 		
+		]]>
+	</select>
 </sqlMap>
 
 

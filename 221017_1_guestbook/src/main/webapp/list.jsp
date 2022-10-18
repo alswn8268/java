@@ -1,3 +1,5 @@
+<%@page import="com.tjoeun.service.selectService"%>
+<%@page import="com.tjoeun.vo.GuestBookList"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -60,8 +62,16 @@ table {
 	 
 	 // 카테고리와 검색어를 받는다.
 	 
+	 // 브라우저 화면에 표시할 한 페이지 분량의 글 목록을 얻어 온다.
+	 GuestBookList guestbookList = selectService.getInstance().selectList(currentPage);
 	 
+	 // 한 페이지 분량의 글 목록과 페이징 작업에 사용할 8개의 변수가 초기화된 객체를 request 영역에 저장한다.
+	 request.setAttribute("guestbookList", guestbookList);
+	 // 글을 입력할 때 엔터를 눌러 줄을 바꿔 입력한 경우 브라우저에 <br/> 태그로 바꿔 출력하기 위해, request 영역에 "\r\n"을 저장한다.
+	 request.setAttribute("enter", "\r\n");
 	 
+	 // request 영역에 저장된 글 목록을 브라우저에 출력하는 페이지(listView)로 넘긴다.
+	 pageContext.forward("listView2.jsp");
 	 %>
 	
 </body>
