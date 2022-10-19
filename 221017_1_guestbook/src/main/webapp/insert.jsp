@@ -80,7 +80,8 @@ table {
 		</table>
 		
 		<!-- 글 작성자 ip 주소를 hidden으로 넘겨준다. -->
-		<input type="hidden" name="ip" value="<%=request.getRemoteAddr()%>>">
+		<%-- <input type="hidden" name="ip" value="<%=request.getRemoteAddr()%>"> --%>
+		<input type="hidden" name="ip" value="${pageContext.request.remoteAddr}">
 		
 		
 	</form>

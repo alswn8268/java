@@ -29,6 +29,44 @@
 			) where rnum >= #startNo# 		
 		]]>
 	</select>
+	
+	<!-- 글 1건을 얻어온다. -->
+	<select id="selectByIdx" parameterClass="int" resultClass="vo">
+		select * from guestbook where idx = #idx#
+	</select>
+	
+	<!-- 글 1건을 삭제한다. -->
+	<delete id="delete" parameterClass="int">
+		delete from guestbook where idx = #idx#
+	</delete>
+	
+	<!-- 글 1건을 수정한다. -->
+	<update id="update" parameterClass="vo">
+		update guestbook set name = #name#, memo = #memo# where idx = #idx#
+	</update>
+	
+	<!-- memo 필드에 검색어가 포함된 글의 개수를 얻어온다. -->
+	<select id="selectCountMemo" parameterClass="String" resultClass="int">
+		select count(*) from guestbook where memo like '%'||#item#||'%'
+		<!-- 
+			데이터베이스별 ibatis 부분 일치 (like) 쿼리 조건 작성 방법
+			oracle : like '%'||'나다'||'%'
+			mysql : like concat('%','나다','%')
+			mssql : like '%'+'나다'+'%'
+		 -->
+	</select>
+	
+	<!-- memo 필드에 검색어가 포함된 1페이지 분량의 글 목록을 얻어온다. -->
+	<select id="selectListMemo" parameterClass="param" resultClass="vo">
+		<![CDATA[
+			select * from (
+				select rownum rnum, TT.* from (
+					select * from guestbook where memo like '%'||#item#||'%' order by idx desc 
+				) TT where rownum <= #endNo#
+			) where rnum >= #startNo# 		
+		]]>
+	</select>
+	
 </sqlMap>
 
 

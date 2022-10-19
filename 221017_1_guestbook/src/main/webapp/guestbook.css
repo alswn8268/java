@@ -1,0 +1,53 @@
+* {
+	font-family: "pretendard"
+}
+.button {
+	background-color: palevioletred;
+	border: none;
+	color: white;
+	padding: 4px 4px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 14px;
+	margin: 4px 4px;
+	transition-duration: 0.4s;
+	cursor: pointer;
+	border-radius: 10px;
+}
+
+.button1 {
+	background-color: white;
+	color: black;
+	border: 2px solid palevioletred;
+}
+
+.button1:hover {
+	background-color: palevioletred;
+	color: white;
+}
+.button2 {
+	background-color: lightgray;
+	color: white;
+	border: 2px solid gray;
+	cursor: not-allowed;
+}
+table {
+	border-color: palevioletred;
+}
+.table:nth-child(2n) {
+	background-color: lavenderblush;
+}
+a {
+	color: black;
+	text-decoration: none;
+}
+a:visited {
+	color: darkgray;
+}
+a:hover {
+	color: palevioletred;
+}
+#btn {
+	background-color: white;
+}

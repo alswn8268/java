@@ -8,6 +8,7 @@ import com.tjoeun.dao.GuestbookDAO;
 import com.tjoeun.ibatis.MyAppSqlConfig;
 import com.tjoeun.vo.GuestBookList;
 import com.tjoeun.vo.GuestbookVO;
+import com.tjoeun.vo.Param;
 
 public class selectService {
 	private static selectService instance = new selectService();
@@ -55,5 +56,65 @@ public class selectService {
 		return guestBookList;
 	}
 	
+	// selectByIdx.jsp에서 호출되는 수정 또는 삭제할 글번호를 넘겨받고 mapper를 얻어온 후 GuestbookDAO 클래스의 글 1건을 얻어오는 select sql 명령을 실행하는 메소드를 호출하는 메소드
+	public GuestbookVO selectByIdx(int idx) {
+		System.out.println("SelectService의 selectByIdx() 메소드 실행");
+		SqlMapClient mapper = MyAppSqlConfig.getSqlMapInstance();
+		
+		// 글 1건을 얻어와서 저장한 후 리턴시킬 객체를 선언한다.
+		GuestbookVO vo = null;
+		try {
+			vo = GuestbookDAO.getInstance().selectByIdx(mapper, idx);
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+		// 얻어온 글 1건을 리턴시킨다.
+		return vo;
+	}
+	
+	// list.jsp에서 호출되는 화면에 표시할 페이지 번호와 검색어(내용)를 넘겨받고 mapper를 얻어온 후 GuestbookDAO 클래스의 1페이지 분량의 검색어를 포함하는 글 목록을 얻어오는 select sql을 명령을 실행하는 메소드를 호출하는 메소드
+	public GuestBookList selectListMemo(int currentPage, String item) {
+		System.out.println("SelectService의 selectListMemo() 메소드 실행");
+		SqlMapClient mapper = MyAppSqlConfig.getSqlMapInstance();
+		
+		GuestBookList guestBookList = null;
+		GuestbookDAO dao = GuestbookDAO.getInstance();
+		
+		try {
+			int pageSize = 10;
+			// 내용에 검색어를 포함하는 글의 개수를 얻어온다.
+			int totalCount = dao.selectCountMemo(mapper, item);
+			guestBookList = new GuestBookList(pageSize, totalCount, currentPage);
+			
+			// startNo, endNo만 sql 명령으로 넘겨줄 때는 데이터 타입이 같아서 HashMap을 이용했지만, Category와 item과는 데이터 타입이 달라서 별도의 클래스를 만들어 클래스 객체에 데이터를 담아서 넘겨야 한다.
+			Param param = new Param();
+			param.setStartNo(guestBookList.getStartNo());
+			param.setEndNo(guestBookList.getEndNo());
+			param.setItem(item);
+			
+			// 내용에 검색어를 포함하는 1페이지 분량의 글을 얻어와서 GuestbookList 클래스의 ArrayList에 저장한다.
+			guestBookList.setList(dao.selectListMemo(mapper, param));
+			
+			System.out.println(totalCount);
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return guestBookList;
+	}
 }	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

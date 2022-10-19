@@ -4,53 +4,14 @@
 <!-- jatl을 사용하겠다고 알려준다. -->
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%> <!-- 대입문, 제어문 -->
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%> <!-- 서식 -->
-<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %> <!-- 함수 -->
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%> <!-- 함수 -->
 
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>방명록 보기</title>
-<style type="text/css">
-* {
-	font-family: "pretendard"
-}
-.button {
-	background-color: palevioletred;
-	border: none;
-	color: white;
-	padding: 4px 4px;
-	text-align: center;
-	text-decoration: none;
-	display: inline-block;
-	font-size: 14px;
-	margin: 4px 4px;
-	transition-duration: 0.4s;
-	cursor: pointer;
-	border-radius: 10px;
-}
-
-.button1 {
-	background-color: white;
-	color: black;
-	border: 2px solid palevioletred;
-}
-
-.button1:hover {
-	background-color: palevioletred;
-	color: white;
-}
-.button2 {
-	background-color: lightgray;
-	color: white;
-	border: 2px solid gray;
-	cursor: not-allowed;
-}
-table {
-	border-color: palevioletred;
-}
-
-</style>
+<link rel="stylesheet" href="./guestbook.css">
 </head>
 <body>
 
@@ -128,26 +89,101 @@ table {
 										
 										<!-- 이름에 태그가 적용되지 않도록 replace 함수를 적용한다. -->
 										<c:set var="name" value="${fn:replace(vo.name, '<', '&lt;')}"/>
-										<c:set var="name" value="${fn:replace(vo.name, '>', '&gt;')}"/>
-										${vo.name}
+										<c:set var="name" value="${fn:replace(name, '>', '&gt;')}"/>
+										${name}
 										
 										(${vo.ip})님이 
 										
-										<fmt:formatDate value="${vo.writeDate}" pattern="yyyy.MM.dd(E)"/>
-										${vo.writeDate}에 남긴 글:<br/>
+										<fmt:formatDate value="${vo.writeDate}" pattern="yyyy.MM.dd(E) HH:mm:ss"/>에 남긴 글:
 										<c:set var="memo" value="${fn:replace(vo.memo, '<', '&lt;')}"/>
-										<c:set var="memo" value="${fn:replace(vo.memo, '>', '&gt;')}"/>
-										<c:set var="memo" value="${fn:replace(vo.memo, enter, '<br/>')}"/>
-										${vo.memo}
+										<c:set var="memo" value="${fn:replace(memo, '>', '&gt;')}"/>
+										<c:set var="memo" value="${fn:replace(memo, enter, '<br/>')}"/>
+										
+										<!-- 수정 삭제 버튼 추가 -->
+										<input class="button button1" type="button" value="수정" onclick="location.href='selectByIdx.jsp?idx=${vo.idx}&currentPage=${guestbookList.currentPage}&job=update'"/>
+										<input class="button button1" type="button" value="삭제" onclick="location.href='selectByIdx.jsp?idx=${vo.idx}&currentPage=${guestbookList.currentPage}&job=delete'"/>
+										<br/>${memo}
 									</td>
+									
 								</tr>
-							</table>				
+							</table>
 						</c:forEach>
-					</c:if>			
-						
+					</c:if>
 				</td>
-			</tr>	 		
+			</tr>			
+			<!-- 페이지 이동 버튼 -->						
+			<tr align="center" id="btn">
+				<td>
+				
+				<!-- 처음으로 -->
+				<c:if test="${guestbookList.currentPage > 1}">
+					<button class="button button1" title="첫 번째 페이지로 이동합니다." onclick="location.href='?currentPage=1'">≪</button>							
+				</c:if>
+				<c:if test="${guestbookList.currentPage <= 1}">
+					<button class="button button2" disabled title="첫 번째 페이지입니다.">≪</button>						
+				</c:if>
+
+				<!-- 10페이지 앞으로 -->
+				<c:if test="${guestbookList.startPage > 1}">
+					<button class="button button1" title=" 10페이지 앞으로 이동합니다." onclick="location.href='?currentPage=${guestbookList.startPage-1}'">＜</button>							
+				</c:if>
+				<c:if test="${guestbookList.startPage <= 1}">
+					<button class="button button2" disabled title="첫 10페이지입니다.">＜</button>&nbsp;&nbsp;						
+				</c:if>
+												
+				<!-- 페이지 선택 -->
+				<c:forEach var="i" begin="${guestbookList.startPage}" end="${guestbookList.endPage}" step="1">
+					<c:if test="${guestbookList.currentPage == i}">
+						<input class="button button2" type="button" value="${i}" disabled/>	
+					</c:if>
+					<c:if test="${guestbookList.currentPage != i}">
+						<input class="button button1" type="button" value="${i}" onclick="location.href='?currentPage=${i}'" value="${i}"/>	
+					</c:if>							
+				</c:forEach>
+
+				<!-- 10페이지 뒤로 -->
+				<c:if test="${guestbookList.endPage < guestbookList.totalPage}">
+					<button class="button button1" title=" 10페이지 뒤로 이동합니다." onclick="location.href='?currentPage=${guestbookList.endPage+1}'">＞</button>								
+				</c:if>
+				<c:if test="${guestbookList.currentPage >= guestbookList.totalPage}">
+					<button class="button button2" disabled title="마지막 10페이지입니다.">＞</button>							
+				</c:if>
+				
+				<!-- 마지막으로 -->
+				<c:if test="${guestbookList.currentPage < guestbookList.totalPage}">
+					<button class="button button1" title="마지막 페이지로 이동합니다." onclick="location.href='?currentPage=${guestbookList.totalPage}'">≫</button>								
+				</c:if>
+				<c:if test="${guestbookList.currentPage >= guestbookList.totalPage}">
+					<button class="button button2" disabled title="마지막 페이지입니다.">≫</button>						
+				</c:if>
+
+				</td>		
+			</tr>
+			
+			<!-- 카테고리별 검색어를 입력받는다. -->
+			<tr>
+				<td align="center">
+					<form action="list.jsp" method="post">
+						<select name="category">
+							<option>내용</option>
+							<option>이름</option>
+							<option>내용 + 이름</option>
+						</select>
+						<input type="text" name="item"/>
+						<input class="button button1" type="submit" value="검색"/>
+					</form>
+				</td>
+			</tr>
+
+			<!-- 글쓰기 버튼 -->
+			<tr>
+				<td align="right">
+					<input class="button button1" type="button" value="글 작성" onclick="location.href='insert.jsp'"/>
+				</td>
+			</tr>						
 	 </table>
+	 
+	 
 </body>
 </html>
 
